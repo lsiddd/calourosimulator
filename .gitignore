@@ -14,3 +14,7 @@ hs_err_pid*
 # IDE files
 .idea
 nbproject
+*.iml
+
+# build files
+out
