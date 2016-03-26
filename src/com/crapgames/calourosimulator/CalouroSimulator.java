@@ -1,6 +1,6 @@
 package com.crapgames.calourosimulator;
 
-import com.crapgames.calourosimulator.views.RootWindow;
+import com.crapgames.calourosimulator.controller.MainController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -9,18 +9,30 @@ import javafx.stage.Stage;
  * Created by Marcos (merkkp@gmail.com) on 3/25/16.
  */
 public class CalouroSimulator extends Application {
+
+    private String title = "Calouro Simulator";
+    private double height = 600;
+    private double width = 800.0;
+    private Stage windowStage;
+
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
-    public void start(Stage windowStage) {
+    public void start(Stage primaryStage) {
 
-        RootWindow rootWindow = new RootWindow("Calouro Simulator", 1024, 768);
-        windowStage.setTitle(RootWindow.title);
-        windowStage.setHeight(RootWindow.height);
-        windowStage.setWidth(RootWindow.width);
+        this.windowStage = primaryStage;
 
-        windowStage.show();
+        this.windowStage.setTitle(this.title);
+        this.windowStage.setHeight(this.height);
+        this.windowStage.setWidth(this.width);
+
+        MainController mainController = new MainController();
+        mainController.start(this.windowStage);
+
+        this.windowStage.show();
+
+
     }
 }
