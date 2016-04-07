@@ -1,5 +1,6 @@
 package com.crapgames.calourosimulator.views;
 
+import com.crapgames.calourosimulator.views.menus.MainMenu;
 import javafx.animation.FadeTransition;
 import javafx.animation.SequentialTransition;
 import javafx.scene.Scene;
@@ -7,6 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
@@ -18,7 +20,7 @@ public class SplashScreen {
     private static Image splashImage = new Image(Assets.ufpaLogo);
     private static Scene splashScene;
 
-    public static Scene getScene(double windowWidth, double windowHeight) {
+    public static Scene getScene(double windowWidth, double windowHeight, Stage windowStage) {
 
         BorderPane splashPanel = new BorderPane();
         splashScene = new Scene(splashPanel, windowWidth, windowHeight, Color.BLACK);
@@ -41,6 +43,7 @@ public class SplashScreen {
         SequentialTransition transition = new SequentialTransition();
         transition.getChildren().addAll(fadeIn, fadeOut);
         transition.play();
+
 
         return SplashScreen.splashScene;
     }
