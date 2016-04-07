@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.views.menus.MenuCreate">
+    <children>
+        <ImageView fitHeight="635.0" fitWidth="802.0" pickOnBounds="true">
+            <image>
+                <Image url="@../../../../../assets/backgrounds/ru.png" />
+            </image>
+            <cursor>
+                <Cursor fx:constant="TEXT" />
+            </cursor>
+        </ImageView>
+        <TextField layoutX="401.0" layoutY="239.0" onAction="#saveUsernameBuffer" promptText="Pick a UserName" />
+        <PasswordField layoutX="403.0" layoutY="277.0" onAction="#savePasswdBuffer" promptText="Pick a Password" />
+        <Button layoutX="512.0" layoutY="378.0" mnemonicParsing="false" onAction="#writeBuffers" text="Create" />
+        <Button fx:id="quitButton" layoutX="403.0" layoutY="378.0" mnemonicParsing="false" onAction="#quitButtonAction" text="Quit" />
+        <ComboBox editable="true" layoutX="403.0" layoutY="318.0" prefWidth="150.0" promptText="Sex" />
+      <Label layoutX="401.0" layoutY="171.0" text="Create an Account" textFill="#000000f0">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

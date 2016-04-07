@@ -34,4 +34,9 @@ public class MainMenu{
     public void quitButtonAction(){
         System.exit(0);
     }
+
+    @FXML
+    private void menuCreate(){
+        /*Chamar o menu de criação de personagem e exibi-lo, não sei como*/
+    }
 }
