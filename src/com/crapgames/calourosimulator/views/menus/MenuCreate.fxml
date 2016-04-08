@@ -21,8 +21,8 @@
                 <Cursor fx:constant="TEXT" />
             </cursor>
         </ImageView>
-        <TextField fx:id="username" layoutX="401.0" layoutY="239.0" onAction="#saveUsernameBuffer" promptText="Pick a UserName" />
-        <PasswordField fx:id="passwd" layoutX="403.0" layoutY="277.0" onAction="#savePasswdBuffer" promptText="Pick a Password" />
+        <TextField fx:id="username" layoutX="401.0" layoutY="239.0" promptText="Pick a UserName" />
+        <PasswordField fx:id="passwd" layoutX="403.0" layoutY="277.0"  promptText="Pick a Password" />
         <Button fx:id="createStuff" layoutX="512.0" layoutY="378.0" mnemonicParsing="false" onAction="#writeBuffers" text="Create" />
         <Button fx:id="quitButton" layoutX="403.0" layoutY="378.0" mnemonicParsing="false" onAction="#quitButtonAction" text="Quit" />
         <ComboBox editable="true" layoutX="403.0" layoutY="318.0" prefWidth="150.0" promptText="Sex" />

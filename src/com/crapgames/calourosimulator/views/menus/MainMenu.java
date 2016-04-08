@@ -39,9 +39,9 @@ public class MainMenu{
 
     @FXML
     private void checkAndStart(){
-        if ((userCheck.getText() != null && !userCheck.getText().isEmpty()))
+        if ((userCheck.getText() != null && !userCheck.getText().isEmpty())){}
             /*Aqui vai ser comparado o campo de username com o que estiver cadastrado*/
-        if(pswdCheck.getText() != null && !pswdCheck.getText().isEmpty())
+        if(pswdCheck.getText() != null && !pswdCheck.getText().isEmpty()){}
             /*Aqui sai ser comparado o campo de senha com o que estiver salvo*/
     }
 

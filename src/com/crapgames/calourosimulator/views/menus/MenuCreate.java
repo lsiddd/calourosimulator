@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import java.sql.*;
 
 import java.io.IOException;
 
@@ -31,9 +32,9 @@ public class MenuCreate {
     */
     @FXML
     private void writeBuffers(){
-        if ((username.getText() != null && !username.getText().isEmpty()))
+        if ((username.getText() != null && !username.getText().isEmpty())){}
             /*Salvar o username.getText() na database*/
-        if(passwd.getText() != null && !passwd.getText().isEmpty())
+        if(passwd.getText() != null && !passwd.getText().isEmpty()){}
             /*salvar o passwd.getText() na database*/
     }
 
