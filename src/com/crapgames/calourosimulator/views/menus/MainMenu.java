@@ -7,6 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -20,14 +22,27 @@ import java.io.IOException;
 public class MainMenu{
     private static Image splashImage = new Image("/assets/backgrounds/ru.png");
     private static  Scene mainMenu;
+    private String user;
     @FXML
-    private Button quitButton;
+    TextField userCheck = new TextField();
+
+    @FXML
+    PasswordField pswdCheck = new PasswordField();
+
 
     public Scene MainMenu() throws IOException {
 
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         mainMenu = new Scene(root);
         return MainMenu.mainMenu;
+    }
+
+    @FXML
+    private void checkAndStart(){
+        if ((userCheck.getText() != null && !userCheck.getText().isEmpty()))
+            /*Aqui vai ser comparado o campo de username com o que estiver cadastrado*/
+        if(pswdCheck.getText() != null && !pswdCheck.getText().isEmpty())
+            /*Aqui sai ser comparado o campo de senha com o que estiver salvo*/
     }
 
     @FXML
