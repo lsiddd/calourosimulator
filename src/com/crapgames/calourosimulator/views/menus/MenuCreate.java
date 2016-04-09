@@ -43,9 +43,7 @@ public class MenuCreate {
         mCreate = new Scene(root);
         return MenuCreate.mCreate;
     }
-    /*
-    * SALVAR OS BUFFERS DOS TEXTFIELD PARA BANCO DE DADOS OU ARQUIVO DE TEXTO
-    */
+
     @FXML
     private void writeBuffers(){
         if ((username.getText() != null && !username.getText().isEmpty())){}

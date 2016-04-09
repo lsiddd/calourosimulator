@@ -1,15 +1,10 @@
 package com.crapgames.calourosimulator.controller;
 
-import com.crapgames.calourosimulator.CalouroSimulator;
-import com.crapgames.calourosimulator.views.*;
-import com.crapgames.calourosimulator.views.menus.*;
+import com.crapgames.calourosimulator.views.SplashScreen;
+import com.crapgames.calourosimulator.views.menus.MainMenu;
+import com.crapgames.calourosimulator.views.menus.MenuCreate;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 /**
  * calourosimulator
