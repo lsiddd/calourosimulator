@@ -22,11 +22,10 @@
       </ImageView>
       <TextField fx:id="userCheck" layoutX="401.0" layoutY="239.0" promptText="UserName" />
       <PasswordField fx:id="pswdCheck" layoutX="403.0" layoutY="277.0" promptText="Password" />
-      <Button fx:id="start" layoutX="524.0" layoutY="378.0" mnemonicParsing="false" onAction="#checkAndStart" text="Start" />
-      <Button layoutX="458.0" layoutY="378.0" mnemonicParsing="false" text="About" />
-      <Button fx:id="quitButton" layoutX="403.0" layoutY="378.0" mnemonicParsing="false" onAction="#quitButtonAction" text="Quit" />
-      <ComboBox editable="true" layoutX="403.0" layoutY="318.0" prefWidth="150.0" promptText="Sex" />
-      <Button layoutX="403.0" layoutY="418.0" mnemonicParsing="false" text="*Lose The Game" />
+      <Button fx:id="start" layoutX="522.0" layoutY="332.0" mnemonicParsing="false" onAction="#checkAndStart" text="Start" />
+      <Button layoutX="458.0" layoutY="332.0" mnemonicParsing="false" text="About" />
+      <Button fx:id="quitButton" layoutX="403.0" layoutY="332.0" mnemonicParsing="false" onAction="#quitButtonAction" text="Quit" />
+      <Button fx:id="juhButton" layoutX="403.0" layoutY="387.0" mnemonicParsing="false" onAction="#juh" text="*Lose The Game" />
       <Button fx:id="menuCreate" layoutX="631.0" layoutY="42.0" mnemonicParsing="false" onAction="#menuCreate" text="Create Account" />
       <Label layoutX="631.0" layoutY="14.0" text="First time playing?" />
    </children>

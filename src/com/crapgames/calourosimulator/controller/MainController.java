@@ -31,4 +31,15 @@ public class MainController {
         }
     }
 
+    public void startCreate(Stage windowStage){
+            try {
+                MenuCreate menu = new MenuCreate();
+                Scene menuShow = menu.menuCreate();
+                windowStage.setScene(menuShow);
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
+    }
+
 }

@@ -6,6 +6,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -21,15 +22,26 @@
                 <Cursor fx:constant="TEXT" />
             </cursor>
         </ImageView>
-        <TextField fx:id="username" layoutX="401.0" layoutY="239.0" promptText="Pick a UserName" />
-        <PasswordField fx:id="passwd" layoutX="403.0" layoutY="277.0"  promptText="Pick a Password" />
-        <Button fx:id="createStuff" layoutX="512.0" layoutY="378.0" mnemonicParsing="false" onAction="#writeBuffers" text="Create" />
-        <Button fx:id="quitButton" layoutX="403.0" layoutY="378.0" mnemonicParsing="false" onAction="#quitButtonAction" text="Quit" />
-        <ComboBox editable="true" layoutX="403.0" layoutY="318.0" prefWidth="150.0" promptText="Sex" />
+        <TextField fx:id="username" layoutX="404.0" layoutY="239.0" promptText="Character Name" />
+        <PasswordField fx:id="passwd" layoutX="404.0" layoutY="276.0" promptText="Pick a Password" />
+        <Button fx:id="createStuff" layoutX="513.0" layoutY="417.0" mnemonicParsing="false" onAction="#writeBuffers" text="Create" />
+        <Button fx:id="quitButton" layoutX="404.0" layoutY="417.0" mnemonicParsing="false" onAction="#quitButtonAction" text="Quit" />
+        <ComboBox fx:id="sexBox" layoutX="403.0" layoutY="318.0" prefWidth="150.0" promptText="Sex">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Masculino" />
+                    <String fx:value="Feminino" />
+                    <String fx:value="Transexual" />
+                    <String fx:value="Berg" />
+                    <String fx:value="Todas as opções" />
+                </FXCollections>
+            </items>
+        </ComboBox>
       <Label layoutX="401.0" layoutY="171.0" text="Create an Account" textFill="#000000f0">
          <font>
             <Font size="29.0" />
          </font>
       </Label>
+      <ColorPicker layoutX="404.0" layoutY="361.0" />
     </children>
 </AnchorPane>

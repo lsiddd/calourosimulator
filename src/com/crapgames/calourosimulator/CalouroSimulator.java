@@ -36,7 +36,7 @@ public class CalouroSimulator extends Application {
             change = true;
         }
         if (change == true) {
-            mainController.startMenu(this.windowStage);
+            mainController.startCreate(this.windowStage);
             this.windowStage.show();
         }
     }
