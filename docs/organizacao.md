@@ -22,6 +22,6 @@
     - [TiledMap](http://www.mapeditor.org)
 
 ### Codificação
-- [ ] Definição da biblioteca/framework
-- [ ] Menu inicial (Depende da criação da sprite de background)
+- [x] Definição da biblioteca/framework
+- [x] Menu inicial (Depende da criação da sprite de background)
 - [ ] Menu de criação do personagem (Depende das sprites de personagens)
