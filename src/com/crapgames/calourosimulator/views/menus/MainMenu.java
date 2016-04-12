@@ -5,9 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
+import javafx.stage.Stage;
+import com.crapgames.calourosimulator.views.about.*;
 import java.io.IOException;
 
 /**
@@ -18,16 +18,17 @@ public class MainMenu{
 
     private static  Scene mainMenu;
 
-    private String user;
+    @FXML
+    Button aboutButton = new Button();
 
     @FXML
     TextField userCheck = new TextField();
 
     @FXML
-    PasswordField pswdCheck = new PasswordField();
+    Button juhButton = new Button();
 
     @FXML
-    Button juhButton = new Button();
+    Button menuCreate = new Button();
 
 
     public Scene MainMenu() throws IOException {
@@ -42,9 +43,6 @@ public class MainMenu{
 
         /*Aqui vai ser comparado o campo de username com o que estiver cadastrado*/
         if ((userCheck.getText() != null && !userCheck.getText().isEmpty())){}
-
-        /*Aqui sai ser comparado o campo de senha com o que estiver salvo*/
-        if(pswdCheck.getText() != null && !pswdCheck.getText().isEmpty()){}
     }
 
     @FXML
@@ -53,7 +51,32 @@ public class MainMenu{
     }
 
     @FXML
-    private void menuCreate(){/*Chamar o menu de criação de personagem e exibi-lo, não sei como*/}
+    private void menuCreate() throws IOException{
+        Stage stage;
+        Parent root;
+
+        stage = (Stage) menuCreate.getScene().getWindow();
+
+        root = FXMLLoader.load(getClass().getResource("MenuCreate.fxml"));
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    private void aboutCall() throws IOException{
+        Stage stage;
+        Parent root;
+
+        stage = (Stage) aboutButton.getScene().getWindow();
+
+        root = FXMLLoader.load(getClass().getResource("About.fxml"));
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @FXML
     private void juh(){System.out.println("Perdi");}

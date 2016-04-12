@@ -6,9 +6,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
 import java.sql.*;
 
 import java.io.IOException;
@@ -23,20 +26,13 @@ public class MenuCreate {
     @FXML
     PasswordField passwd = new PasswordField();
 
-    private static  Scene mCreate;
-
-    ObservableList <String> options =
-            FXCollections.observableArrayList(
-                    "Masculino",
-                    "Feminino",
-                    "Transexual",
-                    "Assexuado",
-                    "Berg",
-                    "Todas as Opções"
-            );
+    @FXML
+    ComboBox sexBox = new ComboBox();
 
     @FXML
-    ComboBox sexBox = new ComboBox(options);
+    Button goBack = new Button();
+
+    private static  Scene mCreate;
 
     public Scene menuCreate() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("MenuCreate.fxml"));
@@ -73,6 +69,26 @@ public class MenuCreate {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
             System.exit(0);
         }*/
+    }
+
+    @FXML
+    private void chooseSexButton(){
+        Object selected = sexBox.getSelectionModel().getSelectedItem();
+        System.out.println(selected);
+    }
+
+    @FXML
+    private void mainButton() throws IOException{
+        Stage stage;
+        Parent root;
+
+        stage = (Stage) goBack.getScene().getWindow();
+
+        root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
