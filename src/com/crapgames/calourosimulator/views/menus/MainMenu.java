@@ -7,7 +7,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import com.crapgames.calourosimulator.views.about.*;
 import java.io.IOException;
 
 /**

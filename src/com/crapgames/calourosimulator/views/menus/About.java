@@ -17,14 +17,6 @@ public class About {
     @FXML
     Button goBack = new Button();
 
-    private static Scene about;
-
-    public Scene aboutScene() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../menus/About.fxml"));
-        about = new Scene(root);
-        return About.about;
-    }
-
     @FXML
     private void mainButton() throws IOException{
         Stage stage;

@@ -1,7 +1,5 @@
 package com.crapgames.calourosimulator.views.menus;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,6 +10,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.sql.*;
 
 import java.io.IOException;
@@ -24,57 +25,29 @@ public class MenuCreate {
     TextField username = new TextField();
 
     @FXML
-    PasswordField passwd = new PasswordField();
-
-    @FXML
     ComboBox sexBox = new ComboBox();
 
     @FXML
     Button goBack = new Button();
 
-    private static  Scene mCreate;
-
-    public Scene menuCreate() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("MenuCreate.fxml"));
-        mCreate = new Scene(root);
-        return MenuCreate.mCreate;
-    }
+    String name;
+    Object selected;
 
     @FXML
     private void writeBuffers(){
-        if ((username.getText() != null && !username.getText().isEmpty())){}
-            /*Salvar o username.getText() na database*/
-        if(passwd.getText() != null && !passwd.getText().isEmpty()){}
-            /**
-            * salvar o passwd.getText() na database
-            * AINDA NÃO FUNCIONAL
-            * vamo que vamo
-            **/
-   /*     Connection c = null;
-        Statement stmt = null;
-        try {
-            Class.forName("org.sqlite.JDBC");
-            c = DriverManager.getConnection("jdbc:sqlite:test.db");
-            System.out.println("Opened database successfully");
+        if ((username.getText() != null && !username.getText().isEmpty())){//deve ser selecionado um nome
 
-            stmt = c.createStatement();
-            String sql = "CREATE TABLE PLAYERS " +
-                    "(ID INT PRIMARY KEY     NOT NULL," +
-                    " NAME           TEXT    NOT NULL, " +
-                    " PSWD            INT     NOT NULL, )";
-            stmt.executeUpdate(sql);
-            stmt.close();
-            c.close();
-        } catch ( Exception e ) {
-            System.err.println( e.getClass().getName() + ": " + e.getMessage() );
-            System.exit(0);
-        }*/
-    }
+            if (sexBox.getSelectionModel().getSelectedItem() != null) {//deve ser selecionado sexo
+                name = username.getText();//nome selecionado
+                selected = sexBox.getSelectionModel().getSelectedItem();//sexo selecionado
+            }
 
-    @FXML
-    private void chooseSexButton(){
-        Object selected = sexBox.getSelectionModel().getSelectedItem();
-        System.out.println(selected);
+        }
+        /**
+         * salvar o username.getText() na database
+         * AINDA NÃO FUNCIONAL
+         * vamo que vamo
+         **/
     }
 
     @FXML
