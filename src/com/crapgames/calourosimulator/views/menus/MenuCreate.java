@@ -1,19 +1,14 @@
 package com.crapgames.calourosimulator.views.menus;
 
+import com.crapgames.calourosimulator.controller.dbSaver;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.sql.*;
 
 import java.io.IOException;
 
@@ -30,18 +25,19 @@ public class MenuCreate {
     @FXML
     Button goBack = new Button();
 
-    String name;
-    Object selected;
-    /*
-    * AGORA É JOGAR ÇASPORRA TD PRA DATABASE LEK
-    * SEI NÃO*/
     @FXML
-    private void writeBuffers(){
+    Button juhButton = new Button();
+
+    @FXML
+    ComboBox enemNota = new ComboBox();
+
+    @FXML
+    private void writeBuffers() throws IOException{
         if ((username.getText() != null && !username.getText().isEmpty())){//deve ser selecionado um nome
 
             if (sexBox.getSelectionModel().getSelectedItem() != null) {//deve ser selecionado sexo
-                name = username.getText();//nome selecionado
-                selected = sexBox.getSelectionModel().getSelectedItem();//sexo selecionado
+                dbSaver saver = new dbSaver();
+                saver.setSave(username.getText(),sexBox.getSelectionModel().getSelectedItem(), enemNota.getSelectionModel().getSelectedItem());
             }
 
         }
@@ -62,7 +58,7 @@ public class MenuCreate {
     }
 
     @FXML
-    public void quitButtonAction(){
+    public void quitButtonAction() throws IOException{
         System.exit(0);
     }
 }

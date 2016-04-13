@@ -25,8 +25,8 @@
             </cursor>
         </ImageView>
         <TextField fx:id="username" layoutX="401.0" layoutY="234.0" promptText="Nome do Pernonagem" />
-        <Button fx:id="createStuff" layoutX="401.0" layoutY="366.0" mnemonicParsing="false" onAction="#writeBuffers" text="Criar e Iniciar" />
-        <Button fx:id="quitButton" layoutX="401.0" layoutY="326.0" mnemonicParsing="false" onAction="#quitButtonAction" text="Sair" />
+        <Button fx:id="createStuff" layoutX="401.0" layoutY="391.0" mnemonicParsing="false" onAction="#writeBuffers" text="Criar e Iniciar" />
+        <Button fx:id="quitButton" layoutX="401.0" layoutY="358.0" mnemonicParsing="false" onAction="#quitButtonAction" text="Sair" />
         <ComboBox fx:id="sexBox" layoutX="401.0" layoutY="280.0" prefWidth="150.0" promptText="Sexo">
             <items>
                 <FXCollections fx:factory="observableArrayList">
@@ -34,15 +34,26 @@
                     <String fx:value="Feminino" />
                     <String fx:value="Transexual" />
                     <String fx:value="Berg" />
+                    <String fx:value="Não sei" />
                     <String fx:value="Todas as opções" />
                 </FXCollections>
             </items>
         </ComboBox>
-      <Button fx:id="goBack" layoutX="515.0" layoutY="326.0" mnemonicParsing="false" onAction="#mainButton" text="Voltar" />
+      <Button fx:id="goBack" layoutX="515.0" layoutY="358.0" mnemonicParsing="false" onAction="#mainButton" text="Voltar" />
       <ImageView fitHeight="51.0" fitWidth="262.0" layoutX="394.0" layoutY="166.0" pickOnBounds="true">
          <image>
             <Image url="@../../../../../assets/criar-logo.png" />
          </image>
       </ImageView>
+      <ComboBox fx:id="enemNota" layoutX="401.0" layoutY="319.0" prefWidth="150.0" promptText="Nota Enem">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="menor que 500" />
+                <String fx:value="500 a 699" />
+                <String fx:value="700 a 899" />
+                <String fx:value="900 a 1000" />
+            </FXCollections>
+        </items>
+      </ComboBox>
     </children>
 </AnchorPane>
