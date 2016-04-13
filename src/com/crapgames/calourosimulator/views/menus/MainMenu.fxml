@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.image.*?>
@@ -20,12 +21,17 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </ImageView>
-      <TextField fx:id="userCheck" layoutX="403.0" layoutY="292.0" promptText="Nome Cadastrado" />
+      <TextField fx:id="userCheck" layoutX="403.0" layoutY="281.0" promptText="Nome Cadastrado" />
       <Button fx:id="start" layoutX="522.0" layoutY="332.0" mnemonicParsing="false" onAction="#checkAndStart" text="Iniciar" />
       <Button fx:id="aboutButton" layoutX="458.0" layoutY="332.0" mnemonicParsing="false" onAction="#aboutCall" text="Sobre" />
       <Button fx:id="quitButton" layoutX="403.0" layoutY="332.0" mnemonicParsing="false" onAction="#quitButtonAction" text="Sair" />
       <Button fx:id="juhButton" layoutX="403.0" layoutY="387.0" mnemonicParsing="false" onAction="#juh" text="Perder o Jogo" />
       <Button fx:id="menuCreate" layoutX="631.0" layoutY="42.0" mnemonicParsing="false" onAction="#menuCreate" text="Criar Personagem" />
       <Label layoutX="631.0" layoutY="14.0" text="Primeira vez Jogando?" />
+      <ImageView fitHeight="54.0" fitWidth="357.0" layoutX="389.0" layoutY="215.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../assets/logo2.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

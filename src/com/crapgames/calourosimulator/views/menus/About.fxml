@@ -8,11 +8,10 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.views.menus.About">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
+      <ImageView fx:id="bkImg" fitHeight="600.0" fitWidth="800.0" onMouseClicked="#mainButton" pickOnBounds="true">
          <image>
             <Image url="@../../../../../assets/backgrounds/itec_credits.png" />
          </image>
       </ImageView>
-      <Button fx:id="goBack" layoutX="686.0" layoutY="556.0" mnemonicParsing="false" onAction="#mainButton" text="Voltar" />
    </children>
 </AnchorPane>

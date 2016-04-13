@@ -32,7 +32,9 @@ public class MenuCreate {
 
     String name;
     Object selected;
-
+    /*
+    * AGORA É JOGAR ÇASPORRA TD PRA DATABASE LEK
+    * SEI NÃO*/
     @FXML
     private void writeBuffers(){
         if ((username.getText() != null && !username.getText().isEmpty())){//deve ser selecionado um nome
@@ -43,11 +45,6 @@ public class MenuCreate {
             }
 
         }
-        /**
-         * salvar o username.getText() na database
-         * AINDA NÃO FUNCIONAL
-         * vamo que vamo
-         **/
     }
 
     @FXML

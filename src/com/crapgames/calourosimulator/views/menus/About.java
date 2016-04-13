@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,14 +16,14 @@ import java.io.IOException;
 public class About {
 
     @FXML
-    Button goBack = new Button();
+    ImageView bkImg = new ImageView();
 
     @FXML
-    private void mainButton() throws IOException{
+    private void mainButton() throws IOException{//se a img for clicada voltar pro menu principal
         Stage stage;
         Parent root;
 
-        stage = (Stage) goBack.getScene().getWindow();
+        stage = (Stage) bkImg.getScene().getWindow();
 
         root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
 

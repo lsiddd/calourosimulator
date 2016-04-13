@@ -40,6 +40,4 @@ public class CalouroSimulator extends Application {
             this.windowStage.show();
         }
     }
-
-
 }

@@ -6,5 +6,5 @@ package com.crapgames.calourosimulator.controller;
  * Classe que vai manipular as databases
  * */
 public class dbSaver {
-    
+
 }
