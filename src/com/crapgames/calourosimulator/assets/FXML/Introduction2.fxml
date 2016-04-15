@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.views.pcna.Introduction2">
+    <children>
+        <ImageView fx:id="imgClick" fitHeight="600.0" fitWidth="800.0" onMouseClicked="#nextScene" pickOnBounds="true">
+            <image>
+                <Image url="@../../assets/pnca-monitor-text.png" />
+            </image>
+        </ImageView>
+        <Text fx:id="text1" fill="#f5eded" layoutX="8.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="composta por Engenharias da Computação, Alimentos e Materiais, a qual evoluiu para Cassino C ++ em função do alto nivel de zoação com Alimentos e Materiais, e não menos importante os jogos!" wrappingWidth="787.0">
+            <font>
+                <Font name="Comic Sans MS" size="25.0" />
+            </font></Text>
+    </children>
+</AnchorPane>

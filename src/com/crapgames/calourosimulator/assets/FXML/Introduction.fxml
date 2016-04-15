@@ -9,19 +9,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.views.pcna.Introduction">
    <children>
-      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
+      <ImageView fx:id="imgClick" fitHeight="600.0" fitWidth="800.0" onMouseClicked="#nextScene" pickOnBounds="true">
          <image>
             <Image url="@../../assets/pnca-monitor-text.png" />
          </image>
       </ImageView>
-      <TextFlow layoutX="1.0" layoutY="391.0" prefHeight="209.0" prefWidth="800.0">
-         <children>
-            <Text fx:id="text1" fill="#ffe5e5" onDragDetected="#text1Show" strokeType="OUTSIDE" strokeWidth="0.0" text="No príncipio era o alfabeto simples e perfeito: A, B, C , D, E ... onde todos haviam de enfrentar a revisão de Matemática, Física e Química de seu ensino médio, e o destino havia de reservar algo de mais de especial, mais diferenciado para a turma C" wrappingWidth="798.95849609375">
-               <font>
-                  <Font size="29.0" />
-               </font>
-            </Text>
-         </children>
-      </TextFlow>
+      <Text fx:id="text1" fill="#f5eded" layoutX="8.0" layoutY="452.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No príncipio era o alfabeto simples e perfeito: A, B, C , D, E ... onde todos haviam de enfrentar de revisar a Matemática, Física e Química de seu ensino médio, e o destino havia de reservar algo de mais de especial, mais diferenciado para a turma C" wrappingWidth="787.0">
+         <font>
+            <Font name="Comic Sans MS" size="25.0" />
+         </font></Text>
    </children>
 </AnchorPane>

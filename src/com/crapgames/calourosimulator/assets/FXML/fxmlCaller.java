@@ -39,4 +39,10 @@ public class fxmlCaller {
 
         return root;
     }
+    public  Parent introduction2() throws IOException{
+        Parent root;
+        root = FXMLLoader.load(getClass().getResource("Introduction2.fxml"));
+
+        return root;
+    }
 }

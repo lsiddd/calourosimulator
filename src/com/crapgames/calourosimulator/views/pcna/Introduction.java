@@ -1,13 +1,11 @@
 package com.crapgames.calourosimulator.views.pcna;
 
-import com.crapgames.calourosimulator.controller.dbSaver;
-import javafx.animation.Interpolator;
-import javafx.animation.Timeline;
-import javafx.animation.TranslateTransition;
-import javafx.animation.TranslateTransitionBuilder;
+import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-import javafx.util.Duration;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 
@@ -16,20 +14,21 @@ import java.io.IOException;
  * primeira scene após a criação de personagem
  **/
 public class Introduction {
-    private String playerName;
-    private String conceito;
-
     @FXML
     Text text1 = new Text();
 
-    /*public Introduction(String playername) throws IOException{
-        dbSaver read = new dbSaver();
-        this.playerName = playerName;
-        this.conceito = read.getNota(playerName + ".profile");
-    }*/
+    @FXML
+    ImageView imgClick = new ImageView();
 
     @FXML
-    private void text1Show(){
+    private void nextScene() throws IOException{
+        fxmlCaller mm = new fxmlCaller();
+        Stage stage;
 
+        stage = (Stage) imgClick.getScene().getWindow();
+
+        Scene scene = new Scene(mm.introduction2());
+        stage.setScene(scene);
+        stage.show();
     }
 }
