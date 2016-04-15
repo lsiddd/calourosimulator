@@ -48,12 +48,18 @@ public class MainMenu{
         if ((userCheck.getText() != null && !userCheck.getText().isEmpty())){
             File f = new File(userCheck.getText() + ".profile");
                     if(f.exists() && !f.isDirectory()){
-                        /*try {
-                            Introduction start = new Introduction(userCheck.getText());
-                            dbSaver find = new dbSaver();
+                        try {
+                            fxmlCaller mm = new fxmlCaller();
+                            Stage stage;
+
+                            stage = (Stage) userCheck.getScene().getWindow();
+
+                            Scene scene = new Scene(mm.introduction());
+                            stage.setScene(scene);
+                            stage.show();
                         } catch (IOException e) {
                             e.printStackTrace();
-                        }*/
+                        }
                     }
 
                         //iniciar o jogo
