@@ -1,5 +1,6 @@
 package com.crapgames.calourosimulator.views.menus;
 
+import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
 import com.crapgames.calourosimulator.controller.dbSaver;
 import com.crapgames.calourosimulator.views.pcna.Introduction;
 import javafx.fxml.FXML;
@@ -35,9 +36,8 @@ public class MainMenu{
     Button menuCreate = new Button();
 
     public Scene MainMenu() throws IOException {
-
-        Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
-        mainMenu = new Scene(root);
+        fxmlCaller call = new fxmlCaller();
+        mainMenu = new Scene(call.mainMenu());
         return MainMenu.mainMenu;
     }
 
@@ -48,12 +48,12 @@ public class MainMenu{
         if ((userCheck.getText() != null && !userCheck.getText().isEmpty())){
             File f = new File(userCheck.getText() + ".profile");
                     if(f.exists() && !f.isDirectory()){
-                        try {
+                        /*try {
                             Introduction start = new Introduction(userCheck.getText());
                             dbSaver find = new dbSaver();
                         } catch (IOException e) {
                             e.printStackTrace();
-                        }
+                        }*/
                     }
 
                         //iniciar o jogo
@@ -64,16 +64,14 @@ public class MainMenu{
 
     @FXML
     public void juh() throws IOException{
-        Stage stage;
-        Parent root;
+            fxmlCaller mm = new fxmlCaller();
+            Stage stage;
 
-        stage = (Stage) juhButton.getScene().getWindow();
+            stage = (Stage) juhButton.getScene().getWindow();
 
-        root = FXMLLoader.load(getClass().getResource("Lost.fxml"));
-
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+            Scene scene = new Scene(mm.lost());
+            stage.setScene(scene);
+            stage.show();
     }
     @FXML
     public void quitButtonAction(){
@@ -82,28 +80,24 @@ public class MainMenu{
 
     @FXML
     private void menuCreate() throws IOException{
+        fxmlCaller mm = new fxmlCaller();
         Stage stage;
-        Parent root;
 
         stage = (Stage) menuCreate.getScene().getWindow();
 
-        root = FXMLLoader.load(getClass().getResource("MenuCreate.fxml"));
-
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(mm.menuCreate());
         stage.setScene(scene);
         stage.show();
     }
 
     @FXML
     private void aboutCall() throws IOException{
+        fxmlCaller mm = new fxmlCaller();
         Stage stage;
-        Parent root;
 
         stage = (Stage) aboutButton.getScene().getWindow();
 
-        root = FXMLLoader.load(getClass().getResource("About.fxml"));
-
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(mm.about());
         stage.setScene(scene);
         stage.show();
     }

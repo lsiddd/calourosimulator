@@ -1,5 +1,6 @@
 package com.crapgames.calourosimulator.views.menus;
 
+import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
 import com.crapgames.calourosimulator.views.pcna.Introduction;
 import com.crapgames.calourosimulator.controller.dbSaver;
 import javafx.fxml.FXML;
@@ -43,14 +44,12 @@ public class MenuCreate {
             if (sexBox.getSelectionModel().getSelectedItem() != null) {//deve ser selecionado sexo
                 saver.setSave(username.getText(),sexBox.getSelectionModel().getSelectedItem(), enemNota.getSelectionModel().getSelectedItem());
 
+                fxmlCaller mm = new fxmlCaller();
                 Stage stage;
-                Parent root;
 
                 stage = (Stage) createStuff.getScene().getWindow();
 
-                root = FXMLLoader.load(getClass().getResource("assets/FXML/introduction.fxml"));
-
-                Scene scene = new Scene(root);
+                Scene scene = new Scene(mm.introduction());
                 stage.setScene(scene);
                 stage.show();
             }
@@ -60,14 +59,12 @@ public class MenuCreate {
 
     @FXML
     public void mainButton() throws IOException{
+        fxmlCaller mm = new fxmlCaller();
         Stage stage;
-        Parent root;
 
         stage = (Stage) goBack.getScene().getWindow();
 
-        root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
-
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(mm.mainMenu());
         stage.setScene(scene);
         stage.show();
     }

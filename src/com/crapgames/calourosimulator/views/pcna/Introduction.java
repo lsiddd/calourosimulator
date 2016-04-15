@@ -22,11 +22,11 @@ public class Introduction {
     @FXML
     Text text1 = new Text();
 
-    public Introduction(String playerName) throws IOException{
+    /*public Introduction(String playername) throws IOException{
         dbSaver read = new dbSaver();
         this.playerName = playerName;
         this.conceito = read.getNota(playerName + ".profile");
-    }
+    }*/
 
     @FXML
     private void text1Show(){
