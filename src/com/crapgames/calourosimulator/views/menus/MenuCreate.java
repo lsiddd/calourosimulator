@@ -1,5 +1,6 @@
 package com.crapgames.calourosimulator.views.menus;
 
+import com.crapgames.calourosimulator.views.pcna.Introduction;
 import com.crapgames.calourosimulator.controller.dbSaver;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,18 +34,18 @@ public class MenuCreate {
 
     @FXML
     private void writeBuffers() throws IOException{
+        dbSaver saver = new dbSaver();
         if ((username.getText() != null && !username.getText().isEmpty())){//deve ser selecionado um nome
 
             if (sexBox.getSelectionModel().getSelectedItem() != null) {//deve ser selecionado sexo
-                dbSaver saver = new dbSaver();
                 saver.setSave(username.getText(),sexBox.getSelectionModel().getSelectedItem(), enemNota.getSelectionModel().getSelectedItem());
-            }
 
+            }
         }
     }
 
     @FXML
-    private void mainButton() throws IOException{
+    public void mainButton() throws IOException{
         Stage stage;
         Parent root;
 

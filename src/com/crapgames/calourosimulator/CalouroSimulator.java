@@ -1,8 +1,12 @@
 package com.crapgames.calourosimulator;
 
+import com.crapgames.calourosimulator.views.menus.MenuCreate;
 import com.crapgames.calourosimulator.controller.MainController;
 import javafx.application.Application;
+import javafx.scene.control.Menu;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 /**
  * calourosimulator
@@ -33,6 +37,7 @@ public class CalouroSimulator extends Application {
         if (change == false) {
             mainController.start(this.windowStage);
             this.windowStage.show();
+            MenuCreate call = new MenuCreate();
             change = true;
         }
         if (change == true) {

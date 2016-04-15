@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.views.pcna.Introduction">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../../pnca-monitor-text.png" />
+         </image>
+      </ImageView>
+      <TextFlow layoutX="1.0" layoutY="391.0" prefHeight="209.0" prefWidth="800.0">
+         <children>
+            <Text fx:id="text1" fill="#ffe5e5" onDragDetected="#text1Show" strokeType="OUTSIDE" strokeWidth="0.0" text="No príncipio era o alfabeto simples e perfeito: A, B, C , D, E ... onde todos haviam de enfrentar a revisão de Matemática, Física e Química de seu ensino médio, e o destino havia de reservar algo de mais de especial, mais diferenciado para a turma C" wrappingWidth="798.95849609375">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
+   </children>
+</AnchorPane>
