@@ -37,7 +37,11 @@ public class CalouroSimulator extends Application {
         if (change == false) {
             mainController.start(this.windowStage);
             this.windowStage.show();
-            MenuCreate call = new MenuCreate();
+            /*stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                public void handle(WindowEvent we) {
+                    System.out.println("Stage is closing");
+                }
+            });*/
             change = true;
         }
         if (change == true) {

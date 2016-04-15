@@ -18,6 +18,9 @@ import java.io.IOException;
  */
 public class MenuCreate {
     @FXML
+    Button createStuff = new Button();
+
+    @FXML
     TextField username = new TextField();
 
     @FXML
@@ -40,7 +43,18 @@ public class MenuCreate {
             if (sexBox.getSelectionModel().getSelectedItem() != null) {//deve ser selecionado sexo
                 saver.setSave(username.getText(),sexBox.getSelectionModel().getSelectedItem(), enemNota.getSelectionModel().getSelectedItem());
 
+                Stage stage;
+                Parent root;
+
+                stage = (Stage) createStuff.getScene().getWindow();
+
+                root = FXMLLoader.load(getClass().getResource("/pcna/introduction.fxml"));
+
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
             }
+
         }
     }
 
