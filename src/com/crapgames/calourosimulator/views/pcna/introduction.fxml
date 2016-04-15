@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
          <image>
-            <Image url="@../../../../../../../pnca-monitor-text.png" />
+            <Image url="@../../../../../assets/pnca-monitor-text.png" />
          </image>
       </ImageView>
       <TextFlow layoutX="1.0" layoutY="391.0" prefHeight="209.0" prefWidth="800.0">
