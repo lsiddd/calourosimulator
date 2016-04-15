@@ -6,7 +6,7 @@ package com.crapgames.calourosimulator.views;
  */
 public class Assets {
 
-    static String directory = "/assets";
+    static String directory = "/com/crapgames/calourosimulator/assets";
     public static String ufpaLogo = directory + "/ufpalogo.png";
 
     public static Backgrounds getBackgrounds() { return new Backgrounds(); }

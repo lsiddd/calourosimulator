@@ -48,7 +48,7 @@ public class MenuCreate {
 
                 stage = (Stage) createStuff.getScene().getWindow();
 
-                root = FXMLLoader.load(getClass().getResource("pcna/introduction.fxml"));
+                root = FXMLLoader.load(getClass().getResource("assets/FXML/introduction.fxml"));
 
                 Scene scene = new Scene(root);
                 stage.setScene(scene);

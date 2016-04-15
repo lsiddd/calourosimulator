@@ -10,7 +10,7 @@
    <children>
       <ImageView fx:id="bkImg" fitHeight="600.0" fitWidth="800.0" onMouseClicked="#mainButton" pickOnBounds="true">
          <image>
-            <Image url="@../../../../../assets/backgrounds/itec_credits.png" />
+            <Image url="@../../assets/backgrounds/itec_credits.png" />
          </image>
       </ImageView>
    </children>

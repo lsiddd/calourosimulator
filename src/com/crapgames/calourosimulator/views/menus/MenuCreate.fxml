@@ -18,7 +18,7 @@
     <children>
         <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
             <image>
-                <Image url="@../../../../../assets/backgrounds/ru.png" />
+                <Image url="@../../assets/backgrounds/ru.png" />
             </image>
             <cursor>
                 <Cursor fx:constant="TEXT" />
@@ -42,7 +42,7 @@
       <Button fx:id="goBack" layoutX="515.0" layoutY="358.0" mnemonicParsing="false" onAction="#mainButton" text="Voltar" />
       <ImageView fitHeight="51.0" fitWidth="262.0" layoutX="394.0" layoutY="166.0" pickOnBounds="true">
          <image>
-            <Image url="@../../../../../assets/criar-logo.png" />
+            <Image url="@../../assets/criar-logo.png" />
          </image>
       </ImageView>
       <ComboBox fx:id="enemNota" layoutX="401.0" layoutY="319.0" prefWidth="150.0" promptText="Nota Enem">
