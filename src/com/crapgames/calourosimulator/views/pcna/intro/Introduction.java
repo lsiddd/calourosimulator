@@ -1,23 +1,25 @@
 package com.crapgames.calourosimulator.views.pcna.intro;
 
 import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
+import com.crapgames.calourosimulator.controller.DbSaver;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by lucas on 12/04/16.
  * primeira scene após a criação de personagem
  **/
 public class Introduction {
-    static int select= 0;
+    static int select = 0;
     int i = 0;
-    String texto1 = "No príncipio era o alfabeto simples e perfeito: A, B, C , D, E ... onde todos haviam de enfrentar de revisar a Matemática, Física e Química de seu ensino médio, e o destino havia de reservar algo de mais de especial, mais diferenciado para a turma C";
     String texto2 = "composta por Engenharias da Computação, Alimentos e Materiais, a qual evoluiu para Cassino C ++ em função do alto nivel de zoação com Alimentos e Materiais, e não menos importante os jogos!";
 
     @FXML
@@ -27,18 +29,21 @@ public class Introduction {
     ImageView imgClick = new ImageView();
 
     @FXML
-    private void change() throws IOException{
+    private void change() throws IOException {
+        DbSaver goTo = new DbSaver();
         fxmlCaller mm = new fxmlCaller();
         Introduction call = new Introduction();
+
         this.select++;
         Stage stage;
 
-        if(select == 1)
-            text1.setText(texto1);
-        else if (select == 2)
-            text1.setText(texto2);
-        else if(select == 3) {
+        Media sound = new Media(new File("src/com/crapgames/calourosimulator/assets/sounds/Pacman.mp3").toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
 
+        if (select == 1)
+            text1.setText(texto2);
+        else if (select == 2) {
             stage = (Stage) imgClick.getScene().getWindow();
 
             Scene scene = new Scene(mm.arc1());

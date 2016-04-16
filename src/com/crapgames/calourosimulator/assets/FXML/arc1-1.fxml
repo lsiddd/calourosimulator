@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.views.pcna.arc1.arc1">
+   <children>
+      <ImageView fx:id="imgArc1" fitHeight="600.0" fitWidth="800.0" onMouseClicked="#setTextImg" pickOnBounds="true">
+         <image>
+            <Image url="@../backgrounds/pnca-monitor-text.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="651.0" layoutY="416.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="651.0" layoutY="480.0" mnemonicParsing="false" text="Button" />
+      <Text fx:id="textArc1" fill="WHITE" layoutX="29.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="353.7294921875">
+         <font>
+            <Font name="Comic Sans MS" size="19.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
