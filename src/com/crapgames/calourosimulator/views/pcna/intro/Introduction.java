@@ -44,9 +44,11 @@ public class Introduction {
         if (select == 1)
             text1.setText(texto2);
         else if (select == 2) {
+            DbSaver up = new DbSaver();
+            up.setLvl(2, up.getCurrent());
             stage = (Stage) imgClick.getScene().getWindow();
 
-            Scene scene = new Scene(mm.arc1());
+            Scene scene = new Scene(mm.select());
             stage.setScene(scene);
             stage.show();
         }

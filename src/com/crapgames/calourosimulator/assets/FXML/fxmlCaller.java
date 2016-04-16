@@ -11,12 +11,15 @@ import java.io.IOException;
  */
 public class fxmlCaller {
     DbSaver see = new DbSaver();
+
     public Parent select() throws IOException{
-        if(see.getLvl(see.getCurrent()) == "1")
+        if(Integer.valueOf(see.getLvl(see.getCurrent())) == 1)
             return FXMLLoader.load(getClass().getResource("Introduction.fxml"));
+
         else /*(see.getLvl(see.getCurrent()) == "2")*/
             return FXMLLoader.load(getClass().getResource("arc1-1.fxml"));
     }
+
     public  Parent introduction() throws IOException{
         return FXMLLoader.load(getClass().getResource("Introduction.fxml"));
     }
@@ -39,6 +42,18 @@ public class fxmlCaller {
 
     public Parent arc1() throws IOException{
         return FXMLLoader.load(getClass().getResource("arc1-1.fxml"));
+    }
+
+    public Parent mathScene() throws IOException{
+        return FXMLLoader.load(getClass().getResource("math.fxml"));
+    }
+
+    public Parent phyScene() throws IOException{
+        return FXMLLoader.load(getClass().getResource("physicScene.fxml"));
+    }
+
+    public Parent qmcScene() throws IOException{
+        return FXMLLoader.load(getClass().getResource("qmcScene.fxml"));
     }
 
 }
