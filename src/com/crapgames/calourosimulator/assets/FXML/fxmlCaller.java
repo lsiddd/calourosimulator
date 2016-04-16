@@ -25,19 +25,19 @@ public class fxmlCaller {
     }
 
     public  Parent lost() throws IOException{
-        return FXMLLoader.load(getClass().getResource("Lost.fxml"));
+        return FXMLLoader.load(getClass().getResource("menus/Lost.fxml"));
     }
 
     public  Parent menuCreate() throws IOException{
-        return FXMLLoader.load(getClass().getResource("MenuCreate.fxml"));
+        return FXMLLoader.load(getClass().getResource("menus/MenuCreate.fxml"));
     }
 
     public  Parent about() throws IOException{
-        return FXMLLoader.load(getClass().getResource("About.fxml"));
+        return FXMLLoader.load(getClass().getResource("menus/About.fxml"));
     }
 
     public  Parent mainMenu() throws IOException{
-        return FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        return FXMLLoader.load(getClass().getResource("menus/MainMenu.fxml"));
     }
 
     public Parent arc1() throws IOException{
@@ -45,15 +45,15 @@ public class fxmlCaller {
     }
 
     public Parent mathScene() throws IOException{
-        return FXMLLoader.load(getClass().getResource("math.fxml"));
+        return FXMLLoader.load(getClass().getResource("arc1/math.fxml"));
     }
 
     public Parent phyScene() throws IOException{
-        return FXMLLoader.load(getClass().getResource("physicScene.fxml"));
+        return FXMLLoader.load(getClass().getResource("arc1/physicScene.fxml"));
     }
 
     public Parent qmcScene() throws IOException{
-        return FXMLLoader.load(getClass().getResource("qmcScene.fxml"));
+        return FXMLLoader.load(getClass().getResource("arc1/qmcScene.fxml"));
     }
 
 }

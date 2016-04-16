@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
          <image>
-            <Image url="@../../assets/backgrounds/ru.png" />
+            <Image url="@../../backgrounds/ru.png" />
          </image>
          <cursor>
             <Cursor fx:constant="TEXT" />
@@ -30,7 +30,7 @@
       <Label layoutX="631.0" layoutY="14.0" text="Primeira vez Jogando?" />
       <ImageView fitHeight="54.0" fitWidth="357.0" layoutX="389.0" layoutY="215.0" pickOnBounds="true">
          <image>
-            <Image url="@../backgrounds/logo2.png" />
+            <Image url="@../../backgrounds/logo2.png" />
          </image>
       </ImageView>
    </children>
