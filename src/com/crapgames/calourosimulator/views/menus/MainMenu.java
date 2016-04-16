@@ -1,15 +1,10 @@
 package com.crapgames.calourosimulator.views.menus;
 
 import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
-import com.crapgames.calourosimulator.controller.dbSaver;
-import com.crapgames.calourosimulator.views.pcna.Introduction;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.stage.Popup;
 import javafx.stage.Stage;
 
 import java.io.File;
