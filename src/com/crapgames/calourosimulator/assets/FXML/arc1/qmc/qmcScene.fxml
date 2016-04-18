@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.views.pcna.arc1.quemistry.Quemistry">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../backgrounds/pnca-monitor-text.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="57.0" layoutY="172.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../sprites/doge.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="241.0" fitWidth="205.0" layoutX="560.0" layoutY="145.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../sprites/walter_white.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="frankText" fill="WHITE" layoutX="65.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HeisenFrank: blablablablablablabla" wrappingWidth="507.39615631103516">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Text>
+      <Text fx:id="alunoText" fill="WHITE" layoutX="65.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aluno: frank, a gente não tem que saber química" wrappingWidth="531.3961791992188">
+         <font>
+            <Font name="Comic Sans MS" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="dormir" layoutX="694.0" layoutY="408.0" mnemonicParsing="false" onAction="#dormir" text="Dormir" />
+      <Button fx:id="estudar" layoutX="692.0" layoutY="451.0" mnemonicParsing="false" onAction="#estudar" text="Estudar" />
+      <Button fx:id="vadeco" layoutX="692.0" layoutY="496.0" mnemonicParsing="false" onAction="#vadeco" text="Vadeco" />
+      <Button fx:id="next" layoutX="695.0" layoutY="540.0" mnemonicParsing="false" onAction="#next" text="Próx." />
+   </children>
+</AnchorPane>

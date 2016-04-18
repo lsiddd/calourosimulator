@@ -2,6 +2,7 @@ package com.crapgames.calourosimulator.views.menus;
 
 import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
 import com.crapgames.calourosimulator.controller.DbSaver;
+import com.crapgames.calourosimulator.controller.Person;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -39,16 +40,10 @@ public class MenuCreate {
         if ((username.getText() != null && !username.getText().isEmpty())){//deve ser selecionado um nome
 
             if (sexBox.getSelectionModel().getSelectedItem() != null) {//deve ser selecionado sexo
-                saver.setSave(username.getText(),sexBox.getSelectionModel().getSelectedItem(), enemNota.getSelectionModel().getSelectedItem());
+                saver.setSave(username.getText(),sexBox.getSelectionModel().getSelectedItem().toString(), enemNota.getSelectionModel().getSelectedItem());
+                Person player = new Person(username.getText());
                 saver.setLvl(1, username.getText());
-                fxmlCaller mm = new fxmlCaller();
-                Stage stage;
-
-                stage = (Stage) createStuff.getScene().getWindow();
-
-                Scene scene = new Scene(mm.introduction());
-                stage.setScene(scene);
-                stage.show();
+                start();
             }
 
         }
@@ -69,5 +64,16 @@ public class MenuCreate {
     @FXML
     public void quitButtonAction() throws IOException{
         System.exit(0);
+    }
+
+    public void start() throws IOException{
+        fxmlCaller mm = new fxmlCaller();
+        Stage stage;
+
+        stage = (Stage) createStuff.getScene().getWindow();
+
+        Scene scene = new Scene(mm.introduction());
+        stage.setScene(scene);
+        stage.show();
     }
 }

@@ -2,6 +2,7 @@ package com.crapgames.calourosimulator.views.menus;
 
 import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
 import com.crapgames.calourosimulator.controller.DbSaver;
+import com.crapgames.calourosimulator.controller.Person;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -42,27 +43,22 @@ public class MainMenu{
 
     @FXML
     private void checkAndStart(){
-        DbSaver s = new DbSaver();
+        DbSaver save = new DbSaver();
 
         /*Aqui vai ser comparado o campo de username com o que estiver cadastrado*/
         if ((userCheck.getText() != null && !userCheck.getText().isEmpty())){
             File f = new File("src/com/crapgames/calourosimulator/saves/" + userCheck.getText() + ".profile");
             if(f.exists() && !f.isDirectory()) {
                 try {
-                    s.setCurrent(userCheck.getText());
+                    save.setCurrent(userCheck.getText());
+
+                    Person player = new Person(userCheck.getText());
 
                     Media sound = new Media(new File("src/com/crapgames/calourosimulator/assets/sounds/Pacman.mp3").toURI().toString());
                     MediaPlayer mediaPlayer = new MediaPlayer(sound);
                     mediaPlayer.play();
 
-                    fxmlCaller mm = new fxmlCaller();
-                    Stage stage;
-
-                    stage = (Stage) userCheck.getScene().getWindow();
-
-                    Scene scene = new Scene(mm.select());
-                    stage.setScene(scene);
-                    stage.show();
+                    start();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -77,6 +73,17 @@ public class MainMenu{
             alert.setContentText("Save não existe, primeiro crie personagem.");
             alert.showAndWait();
         }
+    }
+
+    public void start() throws IOException{
+        fxmlCaller mm = new fxmlCaller();
+        Stage stage;
+
+        stage = (Stage) userCheck.getScene().getWindow();
+
+        Scene scene = new Scene(mm.select());
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
@@ -118,9 +125,4 @@ public class MainMenu{
         stage.setScene(scene);
         stage.show();
     }
-
-    public void goToLevel(String player){
-
-    }
-
 }

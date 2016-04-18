@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.views.pcna.arc1.math.Math">
    <children>
       <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
          <image>
@@ -24,9 +24,9 @@
             <Font name="Comic Sans MS" size="24.0" />
          </font>
       </Text>
-      <Button layoutX="646.0" layoutY="395.0" mnemonicParsing="false" text="Dormir" />
-      <Button layoutX="646.0" layoutY="456.0" mnemonicParsing="false" text="Estudar" />
-      <Button layoutX="646.0" layoutY="516.0" mnemonicParsing="false" text="Vadeco" />
+      <Button fx:id="dormirB" layoutX="646.0" layoutY="395.0" mnemonicParsing="false" onAction="#dormir" text="Dormir" />
+      <Button fx:id="estudarB" layoutX="646.0" layoutY="456.0" mnemonicParsing="false" onAction="#estudar" text="Estudar" />
+      <Button fx:id="vadecoB" layoutX="646.0" layoutY="516.0" mnemonicParsing="false" onAction="#goVadeco" text="Vadeco" />
       <ImageView fitHeight="149.0" fitWidth="200.0" layoutX="37.0" layoutY="225.0" pickOnBounds="true">
          <image>
             <Image url="@../../sprites/doge.png" />

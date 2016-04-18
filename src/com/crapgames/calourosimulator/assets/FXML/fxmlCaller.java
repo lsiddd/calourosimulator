@@ -16,7 +16,7 @@ public class fxmlCaller {
         if(Integer.valueOf(see.getLvl(see.getCurrent())) == 1)
             return FXMLLoader.load(getClass().getResource("Introduction.fxml"));
 
-        else /*(see.getLvl(see.getCurrent()) == "2")*/
+        else
             return FXMLLoader.load(getClass().getResource("arc1-1.fxml"));
     }
 
@@ -40,10 +40,6 @@ public class fxmlCaller {
         return FXMLLoader.load(getClass().getResource("menus/MainMenu.fxml"));
     }
 
-    public Parent arc1() throws IOException{
-        return FXMLLoader.load(getClass().getResource("arc1-1.fxml"));
-    }
-
     public Parent mathScene() throws IOException{
         return FXMLLoader.load(getClass().getResource("arc1/math.fxml"));
     }
@@ -53,7 +49,10 @@ public class fxmlCaller {
     }
 
     public Parent qmcScene() throws IOException{
-        return FXMLLoader.load(getClass().getResource("arc1/qmcScene.fxml"));
+        return FXMLLoader.load(getClass().getResource("arc1/qmc/qmcScene.fxml"));
     }
 
+    public Parent qmcScene1() throws IOException{
+        return FXMLLoader.load(getClass().getResource("arc1/qmc/qmcScene-1.fxml"));
+    }
 }

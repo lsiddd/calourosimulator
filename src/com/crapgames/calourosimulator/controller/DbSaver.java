@@ -36,18 +36,21 @@ public class DbSaver {
         BufferedReader br = new BufferedReader(ist);
         return classe = br.readLine();
     }
+
     public void setLvl(int lvl, String name) throws IOException{
         PrintWriter set = new PrintWriter("src/com/crapgames/calourosimulator/saves/" + name + "Lvl.profile");
         set.print(lvl);
         set.close();
     }
+
     public String getLvl(String fileName) throws IOException{
         String classe;
         InputStream fis = new FileInputStream("src/com/crapgames/calourosimulator/saves/" + fileName + "Lvl.profile");
         InputStreamReader ist = new InputStreamReader(fis, Charset.forName("UTF-8"));
         BufferedReader br = new BufferedReader(ist);
-        return classe = br.readLine();
+        return br.readLine();
     }
+
     public void setCurrent(String name) throws IOException{
         PrintWriter set = new PrintWriter("src/com/crapgames/calourosimulator/saves/current");
         set.print(name);
