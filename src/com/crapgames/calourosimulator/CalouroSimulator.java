@@ -1,12 +1,8 @@
 package com.crapgames.calourosimulator;
 
-import com.crapgames.calourosimulator.views.menus.MenuCreate;
 import com.crapgames.calourosimulator.controller.MainController;
 import javafx.application.Application;
-import javafx.scene.control.Menu;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 /**
  * calourosimulator
@@ -18,7 +14,7 @@ public class CalouroSimulator extends Application {
     private final double height = 600;
     private final double width = 800.0;
     private Stage windowStage;
-    boolean change = false;
+    public static boolean change = false;
 
     public static void main(String[] args) {
         launch(args);
@@ -34,19 +30,9 @@ public class CalouroSimulator extends Application {
         this.windowStage.setWidth(this.width);
         MainController mainController = new MainController();
 
-        if (change == false) {
-            mainController.start(this.windowStage);
-            this.windowStage.show();
-            /*stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-                public void handle(WindowEvent we) {
-                    System.out.println("Stage is closing");
-                }
-            });*/
-            change = true;
-        }
-        if (change == true) {
-            mainController.startMenu(this.windowStage);
-            this.windowStage.show();
-        }
+//        mainController.start(this.windowStage);
+        mainController.startMenu(this.windowStage);
+        this.windowStage.show();
     }
+
 }

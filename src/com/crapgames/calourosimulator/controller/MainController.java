@@ -2,7 +2,6 @@ package com.crapgames.calourosimulator.controller;
 
 import com.crapgames.calourosimulator.views.SplashScreen;
 import com.crapgames.calourosimulator.views.menus.MainMenu;
-import com.crapgames.calourosimulator.views.menus.MenuCreate;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 

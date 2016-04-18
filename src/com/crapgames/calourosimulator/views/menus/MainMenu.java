@@ -4,6 +4,7 @@ import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
 import com.crapgames.calourosimulator.controller.DbSaver;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.media.Media;
@@ -46,30 +47,35 @@ public class MainMenu{
         /*Aqui vai ser comparado o campo de username com o que estiver cadastrado*/
         if ((userCheck.getText() != null && !userCheck.getText().isEmpty())){
             File f = new File("src/com/crapgames/calourosimulator/saves/" + userCheck.getText() + ".profile");
-                    if(f.exists() && !f.isDirectory()){
+            if(f.exists() && !f.isDirectory()) {
+                try {
+                    s.setCurrent(userCheck.getText());
 
-                        try {
-                            s.setCurrent(userCheck.getText());
+                    Media sound = new Media(new File("src/com/crapgames/calourosimulator/assets/sounds/Pacman.mp3").toURI().toString());
+                    MediaPlayer mediaPlayer = new MediaPlayer(sound);
+                    mediaPlayer.play();
 
-                            Media sound = new Media(new File("src/com/crapgames/calourosimulator/assets/sounds/Pacman.mp3").toURI().toString());
-                            MediaPlayer mediaPlayer = new MediaPlayer(sound);
-                            mediaPlayer.play();
+                    fxmlCaller mm = new fxmlCaller();
+                    Stage stage;
 
-                            fxmlCaller mm = new fxmlCaller();
-                            Stage stage;
+                    stage = (Stage) userCheck.getScene().getWindow();
 
-                            stage = (Stage) userCheck.getScene().getWindow();
-
-                            Scene scene = new Scene(mm.select());
-                            stage.setScene(scene);
-                            stage.show();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-
-                    else//jogar este texto em uma popup
-                        System.out.println("Save não existe, primeiro crie personagem");
+                    Scene scene = new Scene(mm.select());
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                // GAMBIARRA FUDIDA, MAS DEUS PERDOA
+            } else {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setContentText("Save não existe, primeiro crie personagem.");
+                alert.showAndWait();
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Save não existe, primeiro crie personagem.");
+            alert.showAndWait();
         }
     }
 
