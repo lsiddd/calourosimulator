@@ -72,14 +72,44 @@ public class Quemistry {
             stage.show();
         }
     }
+    @FXML
+    public void reset(){
+        dormir.setOnAction(e -> dormir());
+        dormir.setText("Dormir");
 
+        estudar.setOnAction(e -> estudar());
+        estudar.setText("Estudar");
+
+        vadeco.setOnAction(e -> vadeco());
+        vadeco.setText("Vadeco");
+
+        next.setDisable(false);
+    }
     @FXML
     private void dormir(){
         aux2 = 0;
+        next.setDisable(true);
         if(aux2 == 0) {
             frankText.setText("Dormindo na aula? Na equação \n Mg + HCl → MgCl2 + H2 considerando o coeficiente 6 para cada produto os dos reagentes será:");
             alunoText.setText(null);
             dormir.setText("3 e 6");
+            dormir.setOnAction(event -> {
+                horas-=5;
+                frankText.setText("você errou, perdeu horas");
+                reset();
+            });
+            estudar.setText("6 e 6");
+            estudar.setOnAction(event -> {
+                horas-=5;
+                frankText.setText("você errou, perdeu horas");
+                reset();
+            });
+            vadeco.setText("6 e 12");
+            vadeco.setOnAction(event -> {
+                horas+=5;
+                frankText.setText("acertô mizeravi");
+                reset();
+            });
 
         }
         else if(aux2 ==1){
@@ -140,13 +170,24 @@ public class Quemistry {
             next.setOnAction(e -> System.exit(0));
         }
     }
+    //aqui são funçoes da qmcScene-1.fxml
+    @FXML
+    private void piorar(){
+        frankText.setText("Realmente\nMenos cinco");
+        horas--;
+
+    }
 
     @FXML
-    private void piorar(){}
+    private void desculpar(){
+        frankText.setText(null);
+        alunoText.setText("Desculpa frak pelamor de Deus eu preciso de hora pfvr nunca te pedi nada");
+
+    }
 
     @FXML
-    private void desculpar(){}
-
-    @FXML
-    private void fdc(){}
+    private void fdc(){
+        frankText.setText("M E N O S C I N C O ");
+        horas--;
+    }
 }
