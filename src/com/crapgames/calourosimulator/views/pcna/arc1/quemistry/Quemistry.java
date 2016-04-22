@@ -53,7 +53,7 @@ public class Quemistry {
             aux++;
         }
         else if(aux == 2){
-            frankText.setText("HeisenFrank: eu não estudei pelo rário pra isso, vou tirar sua carga horária");
+            frankText.setText("HeisenFrank: eu não estudei pelo rádio pra isso, vou tirar sua carga horária");
             alunoText.setText("Aluno: você é meu passe livre, bitch!");
 
             this.horas-=5;

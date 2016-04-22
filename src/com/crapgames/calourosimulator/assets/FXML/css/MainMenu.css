@@ -1,3 +1,7 @@
 .root {
     -fx-background-image: url("../../backgrounds/ru.png");
 }
+
+#firstTime {
+    -fx-color: purple;
+}

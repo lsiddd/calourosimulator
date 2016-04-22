@@ -65,11 +65,13 @@ public class MainMenu{
                 // GAMBIARRA FUDIDA, MAS DEUS PERDOA
             } else {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("Calouro simulator GRITA NA SUA CARA:");
                 alert.setContentText("Save não existe, primeiro crie personagem.");
                 alert.showAndWait();
             }
         } else {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("Calouro simulator GRITA NA SUA CARA:");
             alert.setContentText("Save não existe, primeiro crie personagem.");
             alert.showAndWait();
         }
