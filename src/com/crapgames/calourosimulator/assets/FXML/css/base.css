@@ -1,0 +1,13 @@
+.root {
+    -fx-align: center;
+}
+
+.button {
+    -fx-background-color: purple;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: purple;
+}
