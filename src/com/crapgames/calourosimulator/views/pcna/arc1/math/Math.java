@@ -71,7 +71,7 @@ public class Math {
     private void estudar(){
         this.horas += 5;
         this.pedroText.setText("Pedro: Que orgulho, cê ganhou hora!");
-        this.alunoText.setText("Aluno: Eu sou tô chutando, hehehe");
+        this.alunoText.setText("Aluno: Que ótima forma de ganhar tempo");
 
         this.hoursText.setText("Horas: " + this.horas);
 
@@ -105,8 +105,9 @@ public class Math {
 
     private void end() {
         this.bg.setImage(new Image("com/crapgames/calourosimulator/assets/backgrounds/pcna-turma.png"));
-        this.pedroText.setText("Q Q TÁ CONTESENO?");
-        this.alunoText.setText("Cê foi aprovado cara, vamo tirar uma foto!");
+        this.alunoText.setText("Q Q TÁ CONTESENO?");
+        this.pedroText.setText("Cê foi aprovado cara, vamos tirar uma foto!");
+        this.alunoText.setText("É uma ótima ideia! Vamos tira uma foto cotg legal!")
 
         //TODO achar uma cor q n seja escrota aqui
         this.pedroText.setFill(Color.PURPLE);
