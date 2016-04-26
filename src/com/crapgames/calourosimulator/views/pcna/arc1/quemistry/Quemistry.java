@@ -43,18 +43,18 @@ public class Quemistry {
     @FXML
     private void next() throws IOException{
         if(aux == 0) {
-            frankText.setText("HeisenFrank: É uma habilidade básica de toda engenharia");
+            frankText.setText("Meu Nome é Rádio: É uma habilidade básica de toda engenharia");
             alunoText.setText("Aluno: como sefaz metanfetamina?");
             aux++;
         }
         else if(aux == 1){
-            frankText.setText("HeisenFrank: o quê?");
+            frankText.setText("Meu Nome é Rádio: o quê?");
             alunoText.setText("Aluno: Science, bitch!");
             aux++;
         }
         else if(aux == 2){
-            frankText.setText("HeisenFrank: eu não estudei pelo rádio pra isso, vou tirar sua carga horária");
-            alunoText.setText("Aluno: você é meu passe livre, bitch!");
+            frankText.setText("Meu Nome é Rádio: eu não estudei pelo rádio em capanema pra isso, vou tirar sua carga horária");
+            alunoText.setText("Jamile: Francamente!? Retiro o que eu disse (E então pinga uma gota de suor hetero dos olhos de um aluno)");
 
             this.horas-=5;
 
@@ -151,7 +151,7 @@ public class Quemistry {
 
     @FXML
     private void vadeco(){
-        frankText.setText("HeisenFrank: (você faltou, não sabe o que ele disse, ow)");
+        frankText.setText("Meu nome é Rádio: (você faltou, não sabe o que ele disse, ow)");
         alunoText.setText(null);
         faltas++;
 
@@ -181,7 +181,7 @@ public class Quemistry {
     @FXML
     private void desculpar(){
         frankText.setText(null);
-        alunoText.setText("Desculpa frak pelamor de Deus eu preciso de hora pfvr nunca te pedi nada");
+        alunoText.setText("Desculpa Rádio pelamor de Deus eu preciso de hora pfvr nunca te pedi nada");
 
     }
 
