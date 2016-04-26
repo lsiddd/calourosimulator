@@ -107,7 +107,7 @@ public class Math {
         this.bg.setImage(new Image("com/crapgames/calourosimulator/assets/backgrounds/pcna-turma.png"));
         this.alunoText.setText("Q Q TÁ CONTESENO?");
         this.pedroText.setText("Cê foi aprovado cara, vamos tirar uma foto!");
-        this.alunoText.setText("É uma ótima ideia! Vamos tira uma foto cotg legal!")
+        this.alunoText.setText("É uma ótima ideia! Vamos tira uma foto cotg legal!");
 
         //TODO achar uma cor q n seja escrota aqui
         this.pedroText.setFill(Color.PURPLE);
