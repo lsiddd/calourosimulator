@@ -2,7 +2,6 @@ package com.crapgames.calourosimulator.views.menus;
 
 import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
 import com.crapgames.calourosimulator.controller.DbSaver;
-import com.crapgames.calourosimulator.controller.Person;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -41,7 +40,6 @@ public class MenuCreate {
 
             if (sexBox.getSelectionModel().getSelectedItem() != null) {//deve ser selecionado sexo
                 saver.setSave(username.getText(),sexBox.getSelectionModel().getSelectedItem().toString(), enemNota.getSelectionModel().getSelectedItem());
-                Person player = new Person(username.getText());
                 saver.setLvl(1, username.getText());
                 start();
             }

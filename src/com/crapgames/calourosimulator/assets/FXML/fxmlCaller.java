@@ -55,4 +55,8 @@ public class fxmlCaller {
     public Parent qmcScene1() throws IOException{
         return FXMLLoader.load(getClass().getResource("arc1/qmc/qmcScene-1.fxml"));
     }
+
+    public Parent splashScreen() throws IOException{
+        return FXMLLoader.load(getClass().getResource("SplashScene.fxml"));
+    }
 }

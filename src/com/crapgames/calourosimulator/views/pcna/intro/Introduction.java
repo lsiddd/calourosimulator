@@ -37,10 +37,6 @@ public class Introduction {
         this.select++;
         Stage stage;
 
-        Media sound = new Media(new File("src/com/crapgames/calourosimulator/assets/sounds/Pacman.mp3").toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
-
         if (select == 1)
             text1.setText(texto2);
         else if (select == 2) {

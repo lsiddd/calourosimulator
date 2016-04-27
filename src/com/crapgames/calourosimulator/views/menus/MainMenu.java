@@ -2,7 +2,6 @@ package com.crapgames.calourosimulator.views.menus;
 
 import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
 import com.crapgames.calourosimulator.controller.DbSaver;
-import com.crapgames.calourosimulator.controller.Person;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -51,12 +50,6 @@ public class MainMenu{
             if(f.exists() && !f.isDirectory()) {
                 try {
                     save.setCurrent(userCheck.getText());
-
-                    Person player = new Person(userCheck.getText());
-
-                    Media sound = new Media(new File("src/com/crapgames/calourosimulator/assets/sounds/Pacman.mp3").toURI().toString());
-                    MediaPlayer mediaPlayer = new MediaPlayer(sound);
-                    mediaPlayer.play();
 
                     start();
                 } catch (IOException e) {
