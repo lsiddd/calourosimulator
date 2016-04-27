@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -11,5 +12,6 @@
             <Image url="@../ufpalogo.png" />
          </image>
       </ImageView>
+      <Text fx:id="SplashText" fill="WHITE" layoutX="554.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
 </AnchorPane>
