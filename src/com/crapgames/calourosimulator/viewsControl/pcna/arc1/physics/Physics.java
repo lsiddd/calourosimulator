@@ -1,4 +1,4 @@
-package com.crapgames.calourosimulator.views.pcna.arc1.physics;
+package com.crapgames.calourosimulator.viewsControl.pcna.arc1.physics;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

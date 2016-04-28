@@ -1,4 +1,4 @@
-package com.crapgames.calourosimulator.views.menus;
+package com.crapgames.calourosimulator.viewsControl.menus;
 
 import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
 import com.crapgames.calourosimulator.controller.DbSaver;

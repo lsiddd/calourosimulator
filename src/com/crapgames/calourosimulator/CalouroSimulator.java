@@ -1,8 +1,7 @@
 package com.crapgames.calourosimulator;
 
 import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
-import com.crapgames.calourosimulator.controller.MainController;
-import com.crapgames.calourosimulator.views.SplashScreen;
+import com.crapgames.calourosimulator.viewsControl.SplashScreen;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -34,17 +33,17 @@ public class CalouroSimulator extends Application {
         this.windowStage.setHeight(this.height);
         this.windowStage.setWidth(this.width);
         this.windowStage.setResizable(false);
+        SplashScreen a = new SplashScreen();
+        a.transition();
 
 
-        fxmlCaller mm = new fxmlCaller();
-
-        Scene scene = null;
         try {
-            scene = new Scene(mm.splashScreen());
+            fxmlCaller mm = new fxmlCaller();
+            Scene  scene = new Scene(mm.splashScreen());
+            windowStage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        windowStage.setScene(scene);
         windowStage.show();
     }
 

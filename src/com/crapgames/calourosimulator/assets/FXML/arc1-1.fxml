@@ -6,7 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.views.pcna.arc1.arc1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.viewsControl.pcna.arc1.arc1">
    <children>
       <ImageView fx:id="imgArc1" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
          <image>
@@ -15,7 +15,7 @@
       </ImageView>
       <Button fx:id="math" layoutX="651.0" layoutY="400.0" mnemonicParsing="false" text="Matemática" onAction="#mathButton"/>
       <Button fx:id="physics" layoutX="651.0" layoutY="454.0" mnemonicParsing="false" text="Física" onAction="#phyButton"/>
-      <Text fx:id="textArc1" fill="WHITE" layoutX="32.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aqui começa sua jornada, voce deve completar os três desafios de física, química e matemática antes do final do PCNA(Programa de Como Nao Aprender) e assegurar sua carga horaria. Com qual começar?" wrappingWidth="562.7294921875">
+      <Text fx:id="textArc1" fill="WHITE" layoutX="32.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="562.7294921875" onMouseEntered="#starts">
          <font>
             <Font name="Comic Sans MS" size="19.0" />
          </font>

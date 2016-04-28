@@ -1,7 +1,6 @@
-package com.crapgames.calourosimulator.views.pcna.arc1.quemistry;
+package com.crapgames.calourosimulator.viewsControl.pcna.arc1.quemistry;
 
 import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
-import com.crapgames.calourosimulator.views.menus.MenuCreate;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -19,7 +18,7 @@ import java.io.IOException;
 public class Quemistry {
     int horas = 20;
     int faltas = 0;
-    static int aux2;
+    static int aux2 = 0;
     @FXML
     Button dormir = new Button();
     @FXML
@@ -87,7 +86,6 @@ public class Quemistry {
     }
     @FXML
     private void dormir(){
-        aux2 = 0;
         next.setDisable(true);
         if(aux2 == 0) {
             frankText.setText("Dormindo na aula? Na equação \n Mg + HCl → MgCl2 + H2 considerando o coeficiente 6 para cada produto os dos reagentes será:");
@@ -110,11 +108,32 @@ public class Quemistry {
                 frankText.setText("acertô mizeravi");
                 reset();
             });
+            aux2++;
 
         }
-        else if(aux2 ==1){
-
+        else if(aux2 ==1) {
+            frankText.setText("Sendo e a massa molar do cálcio igual a 40 g/mol, qual a quantidade mínima diária de átomos de cálcio a ser ingerida para que uma pessoa supra suas necessidades?\n");
+            alunoText.setText(null);
+            dormir.setText("7,5 × 10^21");
+            dormir.setOnAction(event -> {
+                horas -= 5;
+                frankText.setText("você errou, perdeu horas");
+                reset();
+            });
+            estudar.setText("1,5 × 10^22");
+            estudar.setOnAction(event -> {
+                horas += 5;
+                frankText.setText("acertô mizeravi");
+                reset();
+            });
+            vadeco.setText("7,5 × 10^23");
+            vadeco.setOnAction(event -> {
+                frankText.setText("você errou, perdeu horas");
+                horas -= 5;
+                reset();
+            });
         }
+
     }
 
     @FXML
@@ -175,19 +194,26 @@ public class Quemistry {
     private void piorar(){
         frankText.setText("Realmente\nMenos cinco");
         horas--;
+        fase2();
 
     }
 
     @FXML
     private void desculpar(){
-        frankText.setText(null);
-        alunoText.setText("Desculpa Rádio pelamor de Deus eu preciso de hora pfvr nunca te pedi nada");
-
+        alunoText.setText(null);
+        frankText.setText("Desculpa Rádio pelamor de Deus eu preciso de hora pfvr nunca te pedi nada");
+        fase2();
     }
 
     @FXML
     private void fdc(){
         frankText.setText("M E N O S C I N C O ");
         horas--;
+        fase2();
+    }
+
+    @FXML
+    public void fase2(){
+
     }
 }

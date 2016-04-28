@@ -1,4 +1,4 @@
-package com.crapgames.calourosimulator.views.pcna.arc1.math;
+package com.crapgames.calourosimulator.viewsControl.pcna.arc1.math;
 
 import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
 import javafx.fxml.FXML;
@@ -7,7 +7,6 @@ import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
