@@ -16,14 +16,9 @@ import javafx.util.Duration;
 import java.io.IOException;
 
 /**
- * Created by lucas on 18/04/16.
+ * Created by lucassid on 18/04/16.
  */
 public class Math {
-
-    public int horas=1;
-    public int cena=0;
-    public boolean acertou = false;
-    public boolean end = false;
 
     @FXML
     ImageView bg = new ImageView();
@@ -45,6 +40,10 @@ public class Math {
     Text hoursText = new Text();
     @FXML
     ImageView pcna = new ImageView();
+    private int horas = 1;
+    private int cena = 0;
+    private boolean acertou = false;
+    private boolean end = false;
 
     @FXML
     private void dormir() {
@@ -116,9 +115,7 @@ public class Math {
         this.dadinhoB.setDisable(true);
         this.next.setDisable(true);
 
-        this.bg.setOnMouseMoved(e->{
-            System.exit(0);
-        });
+        this.bg.setOnMouseMoved(e -> System.exit(0));
     }
 
     @FXML
@@ -134,9 +131,9 @@ public class Math {
         this.dadinhoB.setText("dadinho");
         this.next.setDisable(false);
 
-        this.dormirB.setOnAction(e->{ this.dormir(); });
-        this.estudarB.setOnAction(e->{ this.estudar(); });
-        this.dadinhoB.setOnAction(e->{ this.playDadinho(); });
+        this.dormirB.setOnAction(e -> this.dormir());
+        this.estudarB.setOnAction(e -> this.estudar());
+        this.dadinhoB.setOnAction(e -> this.playDadinho());
 
         switch (this.cena) {
             case 1:

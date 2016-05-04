@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import javafx.scene.image.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 <?import java.net.URL?>
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.controller.SplashScreen">
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.65"
+            fx:controller="com.crapgames.calourosimulator.controller.SplashScreen">
    <children>
-      <ImageView fx:id="splashImage" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" onMouseEntered="#starts" onMouseExited="#starts">
+      <ImageView fx:id="splashImage" fitHeight="600.0" fitWidth="800.0" onMouseEntered="#starts" onMouseExited="#starts"
+                 pickOnBounds="true">
          <image>
-            <Image url="@../assets/ufpalogo.png" />
+            <Image url="@../assets/marvin.png"/>
          </image>
       </ImageView>
-      <Text fx:id="SplashText" fill="WHITE" layoutX="554.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="SplashText" fill="BLACK" layoutX="554.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0"/>
+      <Text fontSmoothingType="LCD" layoutX="106.0" layoutY="444.0" stroke="#403030" strokeType="OUTSIDE"
+            strokeWidth="0.0" text="CRAPGAMES">
+         <font>
+            <Font name="Comic Sans MS Bold" size="96.0"/>
+         </font>
+      </Text>
    </children>
    <stylesheets>
       <URL value="@../assets/css/base.css" />
