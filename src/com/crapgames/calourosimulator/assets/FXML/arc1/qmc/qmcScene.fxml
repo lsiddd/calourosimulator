@@ -23,7 +23,7 @@
             <Image url="@../../../sprites/walter_white.png" />
          </image>
       </ImageView>
-      <Text fx:id="frankText" fill="WHITE" layoutX="65.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HeisenFrank: blablablablablablabla" wrappingWidth="507.39615631103516">
+      <Text fx:id="frankText" fill="WHITE" layoutX="65.0" layoutY="444.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meu nome é rádio: blablablablablablabla" wrappingWidth="507.39615631103516">
          <font>
             <Font name="Comic Sans MS" size="24.0" />
          </font>

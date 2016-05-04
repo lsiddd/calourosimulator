@@ -59,4 +59,8 @@ public class fxmlCaller {
     public Parent splashScreen() throws IOException{
         return FXMLLoader.load(getClass().getResource("SplashScene.fxml"));
     }
+
+    public Parent endGame() throws IOException{
+        return FXMLLoader.load(getClass().getResource("EndGame.fxml"));
+    }
 }

@@ -242,6 +242,7 @@ public class Quemistry {
         piora.setText("frank para pfvr");
         piora.setOnAction(e2 ->{
             textAnimation(frankText, "impossível, uma reação em cadeia se iniciou");
+            piora.setDisable(true);
         });
 
         dsclp.setText("HAHAHA");
@@ -252,12 +253,36 @@ public class Quemistry {
             dsclp.setOnAction(e3_1 -> {
                 textAnimation(frankText, "1. Iniciar  exorcismo\n2. deixa quieto\n3. sei lá, depois eu vejo");
 
-                piora.setDisable(false); fdc.setDisable(false);
+                resetDisable();
 
                 piora.setText("1");dsclp.setText("2");fdc.setText("3");
 
                 piora.setOnAction(e3_1_1 -> {
                     textAnimation(frankText, "Como?");
+                    piora.setText("sim");
+                    piora.setOnAction(event -> {
+                        textAnimation(frankText, "q q tá conteceno");
+                        piora.setOnAction(event1 -> lastOne());
+                        dsclp.setOnAction(event1 -> lastOne());
+                        fdc.setOnAction(event1 -> lastOne());
+                    });
+
+                    dsclp.setText("Talvez");
+                    dsclp.setOnAction(event -> {
+                        dsclp.setDisable(true);
+                        textAnimation(frankText, "o quê, Jamilly, não entendir");
+                        piora.setOnAction(event1 -> lastOne());
+                        dsclp.setOnAction(event1 -> lastOne());
+                        fdc.setOnAction(event1 -> lastOne());
+                        
+                    });
+                    fdc.setText("PELA FAMÍLIA MEU VOTO É NÃO");
+                    fdc.setOnAction(event -> {
+                        textAnimation(frankText, "Egua jamilly, meme agora não");
+                        piora.setOnAction(event1 -> lastOne());
+                        dsclp.setOnAction(event1 -> lastOne());
+                        fdc.setOnAction(event1 -> lastOne());
+                    });
                 });
                 dsclp.setOnAction(e3_1_2 -> {
                     textAnimation(frankText, "Frank desaprendeu tudo o que sabia de química e a culpa é sua(e do sid[perdi])");
@@ -266,7 +291,20 @@ public class Quemistry {
 
                     piora.setOnAction(event -> {
                         dsclp.setDisable(true); fdc.setDisable(true);
-                        piora.setText("Finalizar"); piora.setOnAction(event1 -> System.exit(0));
+                        piora.setText("Finalizar"); piora.setOnAction(event1 -> {
+                            try {
+                                fxmlCaller mm = new fxmlCaller();
+                                Stage stage;
+
+                                stage = (Stage) piora.getScene().getWindow();
+
+                                Scene scene = new Scene(mm.endGame());
+                                stage.setScene(scene);
+                                stage.show();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        });
                         textAnimation(frankText, "Exatamente.. Não há mais nada para lhe ensinar sobre este lugar\nvocê ganhou " + horas + " horas e traumas emocionais");
                     });
                 });
@@ -280,8 +318,77 @@ public class Quemistry {
                 });
             });
         });
+    }
 
+    @FXML private void lastOne(){
+        resetDisable();
+        if (aux3 == 0) {
+            dsclp.setText("próx.");
+            piora.setDisable(true);
+            fdc.setDisable(true);
 
+            textAnimation(frankText, "Agora começa seu desafio final em busca de suas horas, desta vez não vai ser apenas a ca...(diretor do pcna aparece na porta)");
+            dsclp.setOnAction(event -> {
+                textAnimation(frankText, "Qual a formula da banana prata?");
+
+                dsclp.setText("Ba(Na)2Ag");
+                dsclp.setDisable(false);
+                dsclp.setOnAction(event1 -> {
+                    horas+=5;
+                    textAnimation(frankText, "resposta certa, você ganhou horas");
+                    dsclp.setOnAction(event2 -> lastOne());
+                });
+
+                fdc.setText("BaNaAu");
+                fdc.setDisable(false);
+                fdc.setOnAction(event1 -> {
+                    horas-=5;
+                    textAnimation(frankText, "resposta errada, você perdeu horas");
+                    fdc.setOnAction(event2 -> lastOne());
+                });
+
+                piora.setText("BaNaPr");
+                piora.setDisable(false);
+                piora.setOnAction(event1 -> {
+                    horas-=5;
+                    textAnimation(frankText, "resposta errada, você perdeu horas");
+                    piora.setOnAction(event2 -> lastOne());
+                });
+
+                aux3++;
+            });
+        }
+        else if (aux3 == 1){
+            textAnimation(frankText, "e da banana dagua?");
+            dsclp.setText("Ba(Na)2+Ag+U+As");
+            dsclp.setLayoutY(dsclp.getLayoutY()-30);
+
+            fdc.setText("Ba(Na)2+H2O");
+            piora.setText("BaNHeNa+Mo+Li+A+Eu+Bá");
+
+            dsclp.setOnAction(event -> {
+                dsclp.setDisable(false);
+                dsclp.setOnAction(event1 -> {
+                    horas+=5;
+                    textAnimation(frankText, "resposta certa, você ganhou horas");
+                    dsclp.setOnAction(event2 -> theEndFinallyIMSoSleepy());
+                });
+
+                fdc.setDisable(false);
+                fdc.setOnAction(event1 -> {
+                    horas-=5;
+                    textAnimation(frankText, "resposta errada, você perdeu horas");
+                    fdc.setOnAction(event2 -> theEndFinallyIMSoSleepy());
+                });
+
+                piora.setDisable(false);
+                piora.setOnAction(event1 -> {
+                    horas-=5;
+                    textAnimation(frankText, "resposta errada, você perdeu horas");
+                    piora.setOnAction(event2 -> theEndFinallyIMSoSleepy());
+                });
+            });
+        }
     }
 
     @FXML private void textAnimation(Text textbox, String text){//vai controlar animação na setagem de textos
@@ -301,5 +408,27 @@ public class Quemistry {
             animation.play();
         }
         else{textbox.setText(null);}
+    }
+
+    @FXML public void resetDisable(){
+        fdc.setDisable(false);
+        piora.setDisable(false);
+        dsclp.setDisable(false);
+    }
+
+    @FXML private void theEndFinallyIMSoSleepy(){
+        if(horas < 20){
+            textAnimation(frankText, "você perdeu, tente novamente semestre que vem");
+        }
+
+        else{
+            textAnimation(frankText, "Parabéns, você perdeu muito tempo nisso, pode dizer que ganhou, mas ambos sabemos que não é verdade");
+            dsclp.setLayoutX(dsclp.getLayoutX()+80);
+        }
+        dsclp.setText("Sair");
+        dsclp.setOnAction(event -> System.exit(0));
+
+        fdc.setDisable(true);
+        piora.setDisable(true);
     }
 }
