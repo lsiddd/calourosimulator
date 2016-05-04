@@ -1,7 +1,7 @@
 package com.crapgames.calourosimulator;
 
-import com.crapgames.calourosimulator.assets.FXML.fxmlCaller;
-import com.crapgames.calourosimulator.viewsControl.SplashScreen;
+import com.crapgames.calourosimulator.views.fxmlCaller;
+import com.crapgames.calourosimulator.controller.SplashScreen;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

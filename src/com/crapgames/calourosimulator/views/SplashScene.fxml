@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.controller.SplashScreen">
+   <children>
+      <ImageView fx:id="splashImage" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" onMouseEntered="#starts" onMouseExited="#starts">
+         <image>
+            <Image url="@../assets/ufpalogo.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="SplashText" fill="WHITE" layoutX="554.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+   <stylesheets>
+      <URL value="@../assets/css/base.css" />
+   </stylesheets>
+</AnchorPane>
