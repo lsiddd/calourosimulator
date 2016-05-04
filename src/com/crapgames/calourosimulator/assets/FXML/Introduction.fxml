@@ -7,6 +7,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 
+<?import java.net.URL?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.viewsControl.pcna.intro.Introduction">
    <children>
       <ImageView fx:id="imgClick" fitHeight="600.0" fitWidth="800.0" onMouseClicked="#change" onMouseEntered="#starts" pickOnBounds="true">
@@ -19,4 +20,7 @@
             <Font name="Comic Sans MS" size="25.0" />
          </font></Text>
    </children>
+   <stylesheets>
+      <URL value="@css/base.css" />
+   </stylesheets>
 </AnchorPane>

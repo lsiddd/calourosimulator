@@ -21,12 +21,13 @@
                <Font name="Comic Sans MS" size="24.0" />
            </font>
        </Text>
-      <Text fx:id="pedroText" fill="#f8f8f8" layoutX="70.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pedro:">
+      <Text fx:id="pedroText" fill="#f8f8f8" layoutX="70.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pedro:  HJ VAMOS APRENDER A MATARMÁTICA
+      PEGUEM SEUS AXIOMAS E TÁ NA HORA DO MARTELO">
          <font>
             <Font name="Comic Sans MS" size="24.0" />
          </font>
       </Text>
-      <Text fx:id="alunoText" fill="#f8f8f8" layoutX="70.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aluno:">
+      <Text fx:id="alunoText" fill="#f8f8f8" layoutX="70.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aluno: MARTELA O MARTELÃO?">
          <font>
             <Font name="Comic Sans MS" size="24.0" />
          </font>

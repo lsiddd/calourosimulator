@@ -17,10 +17,10 @@ import java.io.IOException;
  */
 public class Math {
 
-    public int horas=0;
-    public int faltas=0;
+    public int horas=1;
     public int cena=0;
     public boolean acertou = false;
+    public boolean end = false;
 
     @FXML
     ImageView bg = new ImageView();
@@ -44,7 +44,7 @@ public class Math {
     @FXML
     private void dormir(){
         this.horas-=5;
-        this.pedroText.setText("Pedro: Pô cara, dormindo? Que vergonha, vai perder hora!\nMas cê pode recuperar, responde isso aqui pra mim!");
+        this.pedroText.setText("Pedro: Pô cara, dormindo? Que vergonha,\n vai perder hora! Mas cê pode recuperar,\n responde isso aqui pra mim!");
         this.alunoText.setText("Calcule a distância entre os pontos A(-2,3) e B(1,5)");
 
         this.dormirB.setText("1");
@@ -53,21 +53,33 @@ public class Math {
         this.next.setDisable(true);
 
         this.dormirB.setOnAction(event->{
-            this.pedroText.setText("Pedro: ACERTOUUUUUUUUUUUU, PARABENS CARA, GANHOU HORA!");
+            this.pedroText.setText("Pedro: ACERTOUUUUUUUUUUUU,\n PARABENS CARA, GANHOU HORA!");
+            this.alunoText.setText("");
             this.horas += 5;
             this.acertou = true;
+            this.end = true;
+        });
+
+        this.dadinhoB.setOnAction(event->{
+            this.playDadinho();
+            this.end = true;
         });
 
         if (!this.acertou) {
-            this.pedroText.setText("Pedro: ERROUUUUUUUUUUUUUu (imitando faustão)");
-            this.alunoText.setText("Aluno: ME DISGURPA CARA EU TAVA NERVOUSOR (cê perdeu mais horas ainda c:)");
+            this.pedroText.setText("Pedro: ERROUUUUUUUUUUUUUu \n(imitando faustão)");
+            this.alunoText.setText("Aluno: ME DISGURPA CARA EU TAVA NERVOUSOR\n (cê perdeu mais horas ainda c:)");
             this.horas -= 5;
+
+            if (this.horas <=0)
+                this.dead();
         }
-        this.next();
+        if (this.end)
+            this.next();
     }
 
     @FXML
     private void estudar(){
+        System.out.println(java.lang.Math.random());
         this.horas += 5;
         this.pedroText.setText("Pedro: Que orgulho, cê ganhou hora!");
         this.alunoText.setText("Aluno: Que ótima forma de ganhar tempo");
@@ -80,6 +92,21 @@ public class Math {
     }
 
     @FXML
+    private void dead() {
+        this.pedroText.setText("cê morreu (tá na vdd tu n morreu)\n(só perdeu todas as horas e o jogo)");
+        this.alunoText.setText("COMER BIFE DE FÌGADO \n (aquela coisa mata de tão ruim) mova o mouse");
+
+        this.dormirB.setDisable(true);
+        this.estudarB.setDisable(true);
+        this.dadinhoB.setDisable(true);
+        this.next.setDisable(true);
+
+        this.next.setOnMouseMoved(e->{
+            System.exit(0);
+        });
+    }
+
+    @FXML
     private void playDadinho(){
         //TODO implementar um mini jogo de dadinho
     }
@@ -87,14 +114,27 @@ public class Math {
     @FXML
     private void next() {
 
+        this.dormirB.setText("dormir");
+        this.estudarB.setText("estudar");
+        this.dadinhoB.setText("dadinho");
+        this.next.setDisable(false);
+
         switch (this.cena) {
             case 1:
+                this.pedroText.setText("Pedro: Hoje a gente vai aprender a somar,\n cêis sabem somar né?");
+                this.alunoText.setText("Aluno: Somar só se for só se for no mar...");
                 break;
             case 2:
+                this.pedroText.setText("Pedro: MAS E DE VETORES,\n CÊIS MANJAM? VETORES CARAI!!!");
+                this.alunoText.setText("ex skinhead alemão (pq se falar o nome a gente toma processo):\nAMO VETORESSSS!");
                 break;
             case 3:
+                this.pedroText.setText("Pedro: Blz, vetores já foi,\n mas iai o q dá de fazer aqui?");
+                this.alunoText.setText("Aluno: N dá pra cortar tudo e depois falar que é culpa do cerol?");
                 break;
             case 4:
+                this.pedroText.setText("Pedro: Vocês são a melhor turma,\n tomem uma dica: invistam no dadinho\npq no curso cêis tão na merda.");
+                this.alunoText.setText("Aluno: Dadinho sim (vamo jogar depois da aula)");
                 this.end();
                 break;
         }

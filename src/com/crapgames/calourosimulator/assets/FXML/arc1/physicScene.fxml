@@ -6,6 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
+<?import java.net.URL?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.viewsControl.pcna.arc1.physics.Physics">
     <children>
         <ImageView fitHeight="600.0" fitWidth="800.0" onMouseClicked="#next" pickOnBounds="true">
@@ -33,4 +34,7 @@
         <Button fx:id="botao3" disable="true" layoutX="621.0" layoutY="469.0" mnemonicParsing="false" />
         <Button fx:id="botao4" disable="true" layoutX="621.0" layoutY="515.0" mnemonicParsing="false" />
     </children>
+    <stylesheets>
+        <URL value="@../css/base.css" />
+    </stylesheets>
 </AnchorPane>
