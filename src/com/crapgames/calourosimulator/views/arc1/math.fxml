@@ -21,8 +21,7 @@
                <Font name="Comic Sans MS" size="24.0" />
            </font>
        </Text>
-      <Text fx:id="pedroText" fill="#f8f8f8" layoutX="70.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pedro:  HJ VAMOS APRENDER A MATARMÁTICA
-      PEGUEM SEUS AXIOMAS E TÁ NA HORA DO MARTELO">
+      <Text fx:id="pedroText" fill="#f8f8f8" layoutX="70.0" layoutY="418.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pedro: HJ VAMOS APRENDER A MATARMÁTICA">
          <font>
             <Font name="Comic Sans MS" size="24.0" />
          </font>
@@ -41,9 +40,9 @@
             <Image url="@../../assets/sprites/doge.png" />
          </image>
       </ImageView>
-       <ImageView fitHeight="241.0" fitWidth="205.0" layoutX="560.0" layoutY="145.0" pickOnBounds="true">
+       <ImageView fx:id="pcna" fitHeight="241.0" fitWidth="205.0" layoutX="560.0" layoutY="145.0" pickOnBounds="true">
            <image>
-               <Image url="@../../assets/sprites/pnca_math.png" />
+              <Image url="@../../assets/sprites/pcna_math_one.png"></Image>
            </image>
        </ImageView>
       <TextFlow id="hours" layoutX="620.0" layoutY="14.0" prefHeight="42.0" prefWidth="155.0" />

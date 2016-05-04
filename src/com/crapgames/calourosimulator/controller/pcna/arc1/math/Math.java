@@ -1,6 +1,8 @@
 package com.crapgames.calourosimulator.controller.pcna.arc1.math;
 
+import com.crapgames.calourosimulator.controller.SpriteAnimation;
 import com.crapgames.calourosimulator.views.fxmlCaller;
+import javafx.animation.Animation;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -9,6 +11,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 
@@ -40,10 +43,12 @@ public class Math {
     Text alunoText = new Text();
     @FXML
     Text hoursText = new Text();
+    @FXML
+    ImageView pcna = new ImageView();
 
     @FXML
-    private void dormir(){
-        this.horas-=5;
+    private void dormir() {
+        this.horas -= 5;
         this.pedroText.setText("Pedro: Pô cara, dormindo? Que vergonha,\n vai perder hora! Mas cê pode recuperar,\n responde isso aqui pra mim!");
         this.alunoText.setText("Calcule a distância entre os pontos A(-2,3) e B(1,5)");
 
@@ -52,29 +57,39 @@ public class Math {
         this.dadinhoB.setText("42");
         this.next.setDisable(true);
 
-        this.dormirB.setOnAction(event->{
+        this.dormirB.setOnAction(event -> {
             this.pedroText.setText("Pedro: ACERTOUUUUUUUUUUUU,\n PARABENS CARA, GANHOU HORA!");
             this.alunoText.setText("");
             this.horas += 5;
             this.acertou = true;
-            this.end = true;
+            this.next();
         });
 
-        this.dadinhoB.setOnAction(event->{
-            this.playDadinho();
-            this.end = true;
-        });
-
-        if (!this.acertou) {
+        this.dadinhoB.setOnAction(event -> {
             this.pedroText.setText("Pedro: ERROUUUUUUUUUUUUUu \n(imitando faustão)");
             this.alunoText.setText("Aluno: ME DISGURPA CARA EU TAVA NERVOUSOR\n (cê perdeu mais horas ainda c:)");
             this.horas -= 5;
 
-            if (this.horas <=0)
+            this.hoursText.setText("Horas: " + horas);
+
+            if (this.horas <= 0)
                 this.dead();
-        }
-        if (this.end)
+
             this.next();
+        });
+
+        this.estudarB.setOnAction(e -> {
+            this.pedroText.setText("Pedro: ERROUUUUUUUUUUUUUu \n(imitando faustão)");
+            this.alunoText.setText("Aluno: ME DISGURPA CARA EU TAVA NERVOUSOR\n (cê perdeu mais horas ainda c:)");
+            this.horas -= 5;
+
+            this.hoursText.setText("Horas: " + horas);
+
+            if (this.horas <= 0)
+                this.dead();
+
+            this.next();
+        });
     }
 
     @FXML
@@ -101,7 +116,7 @@ public class Math {
         this.dadinhoB.setDisable(true);
         this.next.setDisable(true);
 
-        this.next.setOnMouseMoved(e->{
+        this.bg.setOnMouseMoved(e->{
             System.exit(0);
         });
     }
@@ -119,6 +134,10 @@ public class Math {
         this.dadinhoB.setText("dadinho");
         this.next.setDisable(false);
 
+        this.dormirB.setOnAction(e->{ this.dormir(); });
+        this.estudarB.setOnAction(e->{ this.estudar(); });
+        this.dadinhoB.setOnAction(e->{ this.playDadinho(); });
+
         switch (this.cena) {
             case 1:
                 this.pedroText.setText("Pedro: Hoje a gente vai aprender a somar,\n cêis sabem somar né?");
@@ -135,7 +154,7 @@ public class Math {
             case 4:
                 this.pedroText.setText("Pedro: Vocês são a melhor turma,\n tomem uma dica: invistam no dadinho\npq no curso cêis tão na merda.");
                 this.alunoText.setText("Aluno: Dadinho sim (vamo jogar depois da aula)");
-                this.end();
+                this.cena = 0;
                 break;
         }
 
@@ -149,8 +168,8 @@ public class Math {
         this.alunoText.setText("É uma ótima ideia! Vamos tira uma foto cotg legal!");
 
         //TODO achar uma cor q n seja escrota aqui
-        this.pedroText.setFill(Color.PURPLE);
-        this.alunoText.setFill(Color.PURPLE);
+        this.pedroText.setFill(Color.RED);
+        this.alunoText.setFill(Color.RED);
 
         this.dormirB.setDisable(true);
         this.estudarB.setDisable(true);
@@ -173,5 +192,28 @@ public class Math {
                 e1.printStackTrace();
             }
         });
+    }
+
+    @FXML
+    public void animatePcnaMath() {
+
+        int COLUMNS  =   4;
+        int COUNT    =  10;
+        int OFFSET_X =  18;
+        int OFFSET_Y =  25;
+        int WIDTH    = 374;
+        int HEIGHT   = 243;
+        ImageView imageView = new ImageView(new Image("../../../assets/sprites/pcna_math.png"));
+
+
+        final Animation animation = new SpriteAnimation(
+                imageView,
+                Duration.millis(1000),
+                COUNT, COLUMNS,
+                OFFSET_X, OFFSET_Y,
+                WIDTH, HEIGHT
+        );
+        animation.setCycleCount(Animation.INDEFINITE);
+        animation.play();
     }
 }
