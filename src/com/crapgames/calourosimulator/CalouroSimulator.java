@@ -1,8 +1,9 @@
 package com.crapgames.calourosimulator;
 
-import com.crapgames.calourosimulator.controller.MainController;
-import com.crapgames.calourosimulator.library.Config;
+import com.crapgames.calourosimulator.views.fxmlCaller;
+import com.crapgames.calourosimulator.controller.SplashScreen;
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,7 +19,6 @@ public class CalouroSimulator extends Application {
     private final double height = 600;
     private final double width = 800.0;
     private Stage windowStage;
-    public static boolean change = false;
 
     public static void main(String[] args) {
         launch(args);
@@ -33,20 +33,18 @@ public class CalouroSimulator extends Application {
         this.windowStage.setHeight(this.height);
         this.windowStage.setWidth(this.width);
         this.windowStage.setResizable(false);
+        SplashScreen a = new SplashScreen();
+        a.transition();
 
-
-        Config config = new Config();
 
         try {
-            config.createConfigFolder();
+            fxmlCaller mm = new fxmlCaller();
+            Scene  scene = new Scene(mm.splashScreen());
+            windowStage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        MainController mainController = new MainController();
-
-        mainController.startMenu(this.windowStage);
-        this.windowStage.show();
+        windowStage.show();
     }
 
 }
