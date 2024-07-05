@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.controller.menus.Lost">
+   <children>
+      <ImageView fx:id="lostImg" fitHeight="600.0" fitWidth="800.0" onMouseClicked="#mainButton" pickOnBounds="true">
+         <image>
+            <Image url="@../../assets/backgrounds/lost.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

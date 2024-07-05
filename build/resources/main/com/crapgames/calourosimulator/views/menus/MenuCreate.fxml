@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import java.lang.*?>
+<?import java.net.URL?>
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.72" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crapgames.calourosimulator.controller.menus.MenuCreate">
+    <children>
+        <!--<ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">-->
+            <!--<image>-->
+                <!--<Image url="@../../backgrounds/ru.png" />-->
+            <!--</image>-->
+            <!--<cursor>-->
+                <!--<Cursor fx:constant="TEXT" />-->
+            <!--</cursor>-->
+        <!--</ImageView>-->
+        <TextField fx:id="username" layoutX="274.0" layoutY="204.0" prefHeight="55.0" prefWidth="291.0" promptText="Nome do Pernonagem" />
+        <Button fx:id="createStuff" layoutX="357.0" layoutY="400.0" mnemonicParsing="false" onAction="#writeBuffers" prefHeight="43.0" prefWidth="119.0" text="Criar e Iniciar" />
+        <Button fx:id="quitButton" layoutX="284.0" layoutY="408.0" mnemonicParsing="false" onAction="#quitButtonAction" text="Sair" />
+        <ComboBox fx:id="sexBox" layoutX="274.0" layoutY="274.0" prefHeight="43.0" prefWidth="291.0" promptText="Sexo">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Masculino" />
+                    <String fx:value="Feminino" />
+                    <String fx:value="Transexual" />
+                    <String fx:value="Berg" />
+                    <String fx:value="Não sei" />
+                    <String fx:value="Todas as opções" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+      <Button fx:id="goBack" layoutX="505.0" layoutY="408.0" mnemonicParsing="false" onAction="#mainButton" text="Voltar" />
+      <ImageView fitHeight="107.0" fitWidth="557.0" layoutX="145.0" layoutY="62.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../assets/backgrounds/criar-logo.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="enemNota" layoutX="271.0" layoutY="334.0" prefHeight="43.0" prefWidth="291.0" promptText="Nota Enem">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="menor que 500" />
+                <String fx:value="500 a 699" />
+                <String fx:value="700 a 899" />
+                <String fx:value="900 a 1000" />
+            </FXCollections>
+        </items>
+      </ComboBox>
+    </children>
+    <stylesheets>
+        <URL value="@../../assets/css/base.css" />
+        <URL value="@../../assets/css/MenuCreate.css"/>
+    </stylesheets>
+</AnchorPane>
